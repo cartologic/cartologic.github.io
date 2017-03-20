@@ -15,9 +15,9 @@
         <meta name="author" content="Cartologic">
       
       
-        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.1, mkdocs-material-1.0.5">
+      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.4.1">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-9c62e3c932.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-76741b64bc.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-02ce7adcc2.palette.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-66fa0d9bba.palette.css">
       
     
     
@@ -64,13 +64,14 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <header class="md-header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Cartologic" class=" md-icon md-icon--home  md-header-nav__button">
-          
-        </a>
+        
+          <a href=".." title="Cartologic" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
@@ -97,12 +98,17 @@
   <div class="md-search__overlay"></div>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
       <label class="md-icon md-search__icon" for="search"></label>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result"></div>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
       </div>
     </div>
   </div>
@@ -110,9 +116,9 @@
         
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
+        <div class="md-header-nav__source">
+          
             
-              
 
 
   
@@ -131,14 +137,16 @@
     </div>
   </a>
 
-            
-          </div>
+          
+        </div>
       </div>
     </div>
   </nav>
 </header>
     
     <div class="md-container">
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -146,11 +154,11 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
-      
-    </i>
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
     Cartologic
   </label>
   
@@ -180,14 +188,19 @@
     
       
       
-  <li class="md-nav__item md-nav__item--nested">
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
     
     <label class="md-nav__link" for="nav-1">
       Cartoview
     </label>
-    <nav class="md-nav" data-md-component="collapsible">
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
         Cartoview
       </label>
@@ -196,51 +209,60 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href=".." title="About" class="md-nav__link">
-        About
-      </a>
-    
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../keys/" title="Key Features" class="md-nav__link">
-        Key Features
-      </a>
-    
+    <a href="../keys/" title="Key Features" class="md-nav__link">
+      Key Features
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../demo/" title="Demos" class="md-nav__link">
-        Demos
-      </a>
-    
+    <a href="../demo/" title="Demos" class="md-nav__link">
+      Demos
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../QA/" title="Frequently Asked Questions" class="md-nav__link">
-        Frequently Asked Questions
-      </a>
-    
+    <a href="../QA/" title="Frequently Asked Questions" class="md-nav__link">
+      Frequently Asked Questions
+    </a>
   </li>
 
         
           
           
-  <li class="md-nav__item">
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
@@ -300,6 +322,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -309,56 +333,61 @@
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../docker/" title="Docker" class="md-nav__link">
-        Docker
-      </a>
-    
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../developers/" title="Developers" class="md-nav__link">
-        Developers
-      </a>
-    
+    <a href="../developers/" title="Developers" class="md-nav__link">
+      Developers
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../contrib/" title="Contribute" class="md-nav__link">
-        Contribute
-      </a>
-    
+    <a href="../contrib/" title="Contribute" class="md-nav__link">
+      Contribute
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../issues/" title="Issues" class="md-nav__link">
-        Issues
-      </a>
-    
+    <a href="../issues/" title="Issues" class="md-nav__link">
+      Issues
+    </a>
   </li>
 
         
           
           
+          
+
+
   <li class="md-nav__item">
-    
-      <a href="../market/" title="Install App" class="md-nav__link">
-        Install App
-      </a>
-    
+    <a href="../market/" title="Install App" class="md-nav__link">
+      Install App
+    </a>
   </li>
 
         
@@ -422,6 +451,8 @@
   
 </li>
       
+      
+      
     </ul>
   
 </nav>
@@ -432,10 +463,10 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               
-                 <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
-               
               
+                
+                  <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                
                 
                 <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
 <h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
@@ -473,58 +504,42 @@
 </li>
 <li>
 <p>Install CartoView Libraries</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cartoview</span>
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-python linenums">pip install cartoview</code></pre>
 
 </li>
 <li>
 <p>Install CartoView_Django Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;</code></pre>
 
 </li>
 <li>
 <p>Go to your Project Folder</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">cd &lt;your_project_name&gt;</code></pre>
 
 </li>
 <li>
 <p>Detect changes in <code>app_manager</code> App</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py makemigrations app_manager
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py makemigrations app_manager</code></pre>
 
 </li>
 <li>
 <p>create people Table</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py migrate people</code></pre>
 
 </li>
 <li>
 <p>Create Rest of tables :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py migrate</code></pre>
 
 </li>
 <li>
 <p>load default User</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata sample_admin.json
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py loaddata sample_admin.json</code></pre>
 
 </li>
 <li>
 <p>load default oauth app</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata json/default_oauth_apps.json
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py loaddata json/default_oauth_apps.json</code></pre>
 
 </li>
 <li>
@@ -532,9 +547,7 @@
 <ul>
 <li>
 <p>To start Development Server run this Command :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py runserver 0.0.0.0:8000</code></pre>
 
 </li>
 </ul>
@@ -556,22 +569,16 @@
 </li>
 <li>
 <p>Load Default Store</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata app_stores.json
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py loaddata app_stores.json</code></pre>
 
 </li>
 <li>
 <p>Install <a href="https://nodejs.org/en/">nodejs</a> and then install <a href="https://bower.io/">bower</a> we need them to install app_manager dependencies</p>
 </li>
 <li>in this step we will install required files in your project folder type :
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bower install 
-</pre></div>
-</td></tr></table></li>
+    <pre class="codehilite"><code class="language-sh linenums">bower install </code></pre></li>
 <li>Collect Required files type:
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table></li>
+    <pre class="codehilite"><code class="language-sh linenums">python manage.py collectstatic --noinput</code></pre></li>
 <li>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a></li>
 <li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
@@ -587,15 +594,13 @@
 </li>
 <li>
 <p>Install Django 1.8.7 open cmd and type:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">django</span><span class="o">==</span><span class="m">1</span>.8.7
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">pip install django==1.8.7</code></pre>
 
 </li>
 </ul>
 <p><strong>We recommend to use Docker</strong></p>
 <ul>
-<li>Follow <a href="cartoview.md#docker">Docker Instructions</a></li>
+<li>Follow <a href="../docker/#docker">Docker Instructions</a></li>
 </ul>
 <h2 id="existing-geonode-users">Existing GeoNode Users<a class="headerlink" href="#existing-geonode-users" title="Permanent link">&para;</a></h2>
 <p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> then install Cartoview</p>
@@ -612,37 +617,27 @@
 </li>
 <li>
 <p>install cartoview libraries</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">cartoview</span> <span class="o">==</span> &lt;version&gt;
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">pip install cartoview == &lt;version&gt;</code></pre>
 
 </li>
 <li>
 <p>Create Cartoview Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;</code></pre>
 
 </li>
 <li>
 <p>Go to your Project Folder</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">cd &lt;your_project_name&gt;</code></pre>
 
 </li>
 <li>
 <p>detect Changes in app_manager</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py makemigrations app_manager
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py makemigrations app_manager</code></pre>
 
 </li>
 <li>
 <p>create People table</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py migrate people</code></pre>
 
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
@@ -651,22 +646,16 @@
 </li>
 <li>
 <p>create rest of database tables
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
-</pre></div>
-</td></tr></table></p>
+    <pre class="codehilite"><code class="language-sh linenums">python manage.py migrate</code></pre></p>
 </li>
 <li>
 <p>Collect static Files</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table>
+<pre class="codehilite"><code class="language-sh linenums">python manage.py collectstatic --noinput</code></pre>
 
 </li>
 <li>
 <p>Now Development Server :
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000
-</pre></div>
-</td></tr></table></p>
+    <pre class="codehilite"><code class="language-sh linenums">python manage.py runserver 0.0.0.0:8000</code></pre></p>
 </li>
 </ul>
 <h2 id="deployment-notes">Deployment notes<a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a></h2>
@@ -687,9 +676,7 @@ After you install or update apps from the app manager page you will need to rest
 <ul>
 <li>follow these steps to get apps working on nginx<ul>
 <li>collect static files using this commands
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table></li>
+    <pre class="codehilite"><code class="language-sh linenums">python manage.py collectstatic --noinput</code></pre></li>
 <li>restart server now you should restart server after installing any app</li>
 </ul>
 </li>
@@ -697,6 +684,12 @@ After you install or update apps from the app manager page you will need to rest
 </div>
 </li>
 </ul>
+                
+                  
+                
+              
+              
+                
               
             </article>
           </div>
@@ -764,7 +757,7 @@ After you install or update apps from the app manager page you will need to rest
       
     </div>
     
-      <script src="../assets/javascripts/application-f7ac33b6fb.js"></script>
+      <script src="../assets/javascripts/application-3964c0cb56.js"></script>
       <script>app.initialize({url:{base:".."}})</script>
       
     
