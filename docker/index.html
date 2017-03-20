@@ -321,8 +321,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#linux-docker" title="Linux Docker" class="md-nav__link">
-    Linux Docker
+  <a href="#docker-on-linux" title="Docker on Linux" class="md-nav__link">
+    Docker on Linux
   </a>
   
 </li>
@@ -431,8 +431,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#linux-docker" title="Linux Docker" class="md-nav__link">
-    Linux Docker
+  <a href="#docker-on-linux" title="Docker on Linux" class="md-nav__link">
+    Docker on Linux
   </a>
   
 </li>
@@ -481,24 +481,28 @@
 </li>
 <li>
 <p>Open <code>docker-compose.yml</code> and Look at the port numbers for GeoServer and Postges and change the number before the <code>:</code> this will be the port on your machine</p>
-</li>
-<li>
-<p>If you want to run this project with a domain :</p>
-<ul>
-<li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:</li>
-</ul>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<ul>
+<p class="admonition-title">Tips<ul>
 <li>any file with <code>.env</code> EXTENSION Is a file that contains environment variables passed to specific container for example <code>django.env</code> file contains environment variables passed to Cartoview container so django can read these variables and use them</li>
-</ul>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<ul>
 <li>default database username: <code>cartologic</code> and password: <code>root</code></li>
 <li>default database user in <code>postgis.env</code> file in your project if want to change it.</li>
+<li>If you want to run this project with a domain :<ul>
+<li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:
+    <pre class="codehilite"><code class="language-python linenums">DATABASE_URL=postgres://&lt;database_user_name&gt;:&lt;database_password&gt;@postgis:5432/cartoview
+GEOSERVER_PUBLIC_LOCATION=http://&lt;your_domain_or_ip&gt;/geoserver/
+GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+SITEURL=http://&lt;your_domain_or_ip&gt;
+ALLOWED_HOSTS=['*']</code></pre></li>
 </ul>
+</li>
+<li>For windows users the default IP aasigned to docker is : <code>192.168.99.100</code> so the default django.env file must be some thing like this:
+    <pre class="codehilite"><code class="language-python linenums">DATABASE_URL=postgres://&lt;database_user_name&gt;:&lt;database_password&gt;@postgis:5432/cartoview
+GEOSERVER_PUBLIC_LOCATION=http://192.168.99.100/geoserver/
+GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+SITEURL=http://192.168.99.100
+ALLOWED_HOSTS=['*']</code></pre></li>
+</ul>
+</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -506,23 +510,6 @@
 <li>For windows Users Please Comment volumes lines of postgis Container only in <code>docker-compose.yml</code> by preceding the line with <code>#</code> something like this:
     <pre class="codehilite"><code class="language-python linenums">    #   volumes:
     #      - pgdata:/var/lib/postgresql</code></pre></li>
-</ul>
-</div>
-<pre class="codehilite"><code class="language-python linenums">DATABASE_URL=postgres://&lt;database_user_name&gt;:&lt;database_password&gt;@postgis:5432/cartoview
-GEOSERVER_PUBLIC_LOCATION=http://&lt;your_domain_or_ip&gt;/geoserver/
-GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
-SITEURL=http://&lt;your_domain_or_ip&gt;
-ALLOWED_HOSTS=['*']</code></pre>
-
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<ul>
-<li>For windows users the default IP aasigned to docker is : <code>192.168.99.100</code> so the default django.env file must be some thing like this:
-<pre class="codehilite"><code class="language-python linenums">DATABASE_URL=postgres://&lt;database_user_name&gt;:&lt;database_password&gt;@postgis:5432/cartoview
-GEOSERVER_PUBLIC_LOCATION=http://192.168.99.100/geoserver/
-GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
-SITEURL=http://192.168.99.100
-ALLOWED_HOSTS=['*']</code></pre></li>
 </ul>
 </div>
 </li>
@@ -577,7 +564,7 @@ After you install any new app or app update you will need to restart docker manu
 <ul>
 <li>Docker volumes have some issues  with windows so you have to backup your postgres database.</li>
 </ul>
-<h2 id="linux-docker">Linux Docker<a class="headerlink" href="#linux-docker" title="Permanent link">&para;</a></h2>
+<h2 id="docker-on-linux">Docker on Linux<a class="headerlink" href="#docker-on-linux" title="Permanent link">&para;</a></h2>
 <ul>
 <li>you will Find all postgres data in pgdata folder</li>
 </ul>
