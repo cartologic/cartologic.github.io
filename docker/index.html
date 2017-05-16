@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.2">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-e2807e330f.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -95,7 +95,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -469,15 +469,19 @@
 <li>for windows users please use <code>Docker Quickstart Terminal</code> to execute the following commands</li>
 <li>
 <p>Create Cartoview Project which contains required files to run and configure Docker using this command:</p>
-<pre class="codehilite"><code class="language-python linenums">django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">--</span><span class="n">name</span> <span class="n">django</span><span class="o">.</span><span class="n">env</span><span class="p">,</span><span class="n">uwsgi</span><span class="o">.</span><span class="n">ini</span><span class="p">,</span><span class="o">.</span><span class="n">bowerrc</span><span class="p">,</span><span class="n">server</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
 
 </li>
 <li>
-<p>Replace <code>&lt;your_project_name&gt;</code> with the desired name </p>
+<p>Replace <code>&lt;your_project_name&gt;</code> with the desired name</p>
 </li>
 <li>
 <p>Go to your project Folder</p>
-<pre class="codehilite"><code class="language-python linenums">cd &lt;your_project_name&gt;</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
 
 </li>
 <li>
@@ -489,19 +493,31 @@
 <li>default database user in <code>postgis.env</code> file in your project if want to change it.</li>
 <li>If you want to run this project with a domain :<ul>
 <li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:
-    <pre class="codehilite"><code class="language-python linenums">DATABASE_URL=postgres://&lt;database_user_name&gt;:&lt;database_password&gt;@postgis:5432/cartoview
-GEOSERVER_PUBLIC_LOCATION=http://&lt;your_domain_or_ip&gt;/geoserver/
-GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
-SITEURL=http://&lt;your_domain_or_ip&gt;
-ALLOWED_HOSTS=['*']</code></pre></li>
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">cartoview</span>
+<span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;</span>
+<span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></li>
 </ul>
 </li>
 <li>For windows users the default IP aasigned to docker is : <code>192.168.99.100</code> so the default django.env file must be some thing like this:
-    <pre class="codehilite"><code class="language-python linenums">DATABASE_URL=postgres://&lt;database_user_name&gt;:&lt;database_password&gt;@postgis:5432/cartoview
-GEOSERVER_PUBLIC_LOCATION=http://192.168.99.100/geoserver/
-GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
-SITEURL=http://192.168.99.100
-ALLOWED_HOSTS=['*']</code></pre></li>
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">cartoview</span>
+<span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">99.100</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">99.100</span>
+<span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></li>
 </ul>
 </p>
 </div>
@@ -509,19 +525,27 @@ ALLOWED_HOSTS=['*']</code></pre></li>
 <p class="admonition-title">Warning</p>
 <ul>
 <li>For windows Users Please Comment volumes lines of postgis Container only in <code>docker-compose.yml</code> by preceding the line with <code>#</code> something like this:
-    <pre class="codehilite"><code class="language-python linenums">    #   volumes:
-    #      - pgdata:/var/lib/postgresql</code></pre></li>
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="c1">#   volumes:</span>
+    <span class="c1">#      - pgdata:/var/lib/postgresql</span>
+</pre></div>
+</td></tr></table></li>
+<li>if <code>django-admin.py</code> not working try <code>django-admin</code></li>
 </ul>
 </div>
 </li>
 <li>
 <p>Start Docker images(cartoview,geoserver,postgres) type :</p>
-<pre class="codehilite"><code class="language-sh linenums">make run</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make run
+</pre></div>
+</td></tr></table>
 
 </li>
 <li>
 <p>create  people table :</p>
-<pre class="codehilite"><code class="language-sh linenums">make migrate_people</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make migrate_people
+</pre></div>
+</td></tr></table>
 
 <div class="admonition bug">
 <p class="admonition-title">Bug</p>
@@ -530,7 +554,9 @@ ALLOWED_HOSTS=['*']</code></pre></li>
 </li>
 <li>
 <p>create rest of  tabels and collect static files :</p>
-<pre class="codehilite"><code class="language-sh linenums">make static_db</code></pre>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make static_db
+</pre></div>
+</td></tr></table>
 
 <div class="admonition success">
 <p class="admonition-title">Success</p>
@@ -552,9 +578,13 @@ CartoView will not be able to restart docker when new apps install.
 After you install any new app or app update you will need to restart docker manually until this issue is addressed in the future<ul>
 <li>follow these steps to get apps working on nginx<ul>
 <li>collect static files using this commands in your project folder
-    <pre class="codehilite"><code class="language-sh linenums">make collect_static</code></pre></li>
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make collect_static
+</pre></div>
+</td></tr></table></li>
 <li>restart server now with the following command you should restart server after installing any app
-    <pre class="codehilite"><code class="language-sh linenums">docker-compose restart cartoview</code></pre></li>
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker-compose restart cartoview
+</pre></div>
+</td></tr></table></li>
 </ul>
 </li>
 </ul>
@@ -642,7 +672,7 @@ After you install any new app or app update you will need to restart docker manu
       
     </div>
     
-      <script src="../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:".."}})</script>
       
     

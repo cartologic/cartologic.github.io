@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -17,7 +17,7 @@
       
         <link rel="shortcut icon" href="../assets/images/favicon.png">
       
-      <meta name="generator" content="mkdocs-0.16.2, mkdocs-material-1.5.1">
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.2">
     
     
       
@@ -28,9 +28,9 @@
       <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application-8d06ab29f4.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application-e2807e330f.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-66fa0d9bba.palette.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
       
     
     
@@ -95,7 +95,7 @@
           <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
 <div class="md-search" data-md-component="search">
-  <div class="md-search__overlay"></div>
+  <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
@@ -424,13 +424,19 @@
 <ul>
 <li>
 <p>Create a new empty app from cartoview app template as follow in your cartoview project directory
-<pre class="codehilite"><code class="language-python linenums">django-admin.py startapp --template=https://github.com/cartologic/cartoview-app-template/archive/master.zip &lt;your_App_name&gt;</code></pre></p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startapp</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">&lt;</span><span class="n">your_App_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table></p>
 </li>
 <li>
 <p>Edit cartoview_project/apps/apps.yml and add entry for your app
-<pre class="codehilite"><code class="language-yml linenums">- name: &lt;app_name&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>- name: &lt;app_name&gt;
   active: true
-  order: 0</code></pre></p>
+  order: 0
+</pre></div>
+</td></tr></table></p>
 </li>
 <li>
 <p>Add the App to the database form django admin interface</p>
@@ -539,7 +545,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application-c6f9af8d0c.js"></script>
+      <script src="../assets/javascripts/application-6b599127bc.js"></script>
       <script>app.initialize({url:{base:".."}})</script>
       
     
