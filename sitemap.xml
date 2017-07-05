@@ -22,19 +22,37 @@
     </url>
         
     <url>
-     <loc>http://www.cartologic.com//QA/</loc>
+     <loc>http://www.cartologic.com//installation_ubuntu/</loc>
      <lastmod>2017-07-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.cartologic.com//installation/</loc>
+     <loc>http://www.cartologic.com//installation_windows/</loc>
+     <lastmod>2017-07-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.cartologic.com//installation_docker/</loc>
+     <lastmod>2017-07-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.cartologic.com//installation_vagrant/</loc>
      <lastmod>2017-07-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//docker/</loc>
+     <lastmod>2017-07-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://www.cartologic.com//market/</loc>
      <lastmod>2017-07-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -52,13 +70,13 @@
     </url>
         
     <url>
-     <loc>http://www.cartologic.com//issues/</loc>
+     <loc>http://www.cartologic.com//QA/</loc>
      <lastmod>2017-07-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://www.cartologic.com//market/</loc>
+     <loc>http://www.cartologic.com//issues/</loc>
      <lastmod>2017-07-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
