@@ -192,7 +192,7 @@
         }, 
         {
             "location": "/market/", 
-            "text": "Warning\n\n\nthis steps works only if Cartoview up and running\n\n\n\n\n\n\nto Install apps from \nGeo App Market\n Follow these steps\n\n\nGo to \napps\n tab and click \nmanage apps\n Button and install app you want", 
+            "text": "Warning\n\n\nthis steps works only if Cartoview up and running\n\n\n\n\n\n\nto Install apps from \nGeo App Market\n Follow these steps\n\n\nGo to \napps\n tab and click \nmanage apps\n Button and install app you want\n    \n\n\n\n\n\n\n\n\n\n\nWarning\n\n\nRestart the sever after installing the required Apps", 
             "title": "Install App"
         }
     ]
