@@ -303,6 +303,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geonode-installation" title="Geonode Installation" class="md-nav__link">
+    Geonode Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-installation-and-configuration" title="Database Installation and Configuration" class="md-nav__link">
+    Database Installation and Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartoview-libraries-installation" title="CartoView Libraries Installation" class="md-nav__link">
+    CartoView Libraries Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-geoserver" title="install Geoserver" class="md-nav__link">
+    install Geoserver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-on-windows" title="Install On Windows" class="md-nav__link">
     Install On Windows
   </a>
@@ -432,6 +460,34 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#geonode-installation" title="Geonode Installation" class="md-nav__link">
+    Geonode Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-installation-and-configuration" title="Database Installation and Configuration" class="md-nav__link">
+    Database Installation and Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartoview-libraries-installation" title="CartoView Libraries Installation" class="md-nav__link">
+    CartoView Libraries Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-geoserver" title="install Geoserver" class="md-nav__link">
+    install Geoserver
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-on-windows" title="Install On Windows" class="md-nav__link">
     Install On Windows
   </a>
@@ -491,21 +547,110 @@
 <p>Follow these setps if you don't have Geonode  installed on your ubuntu system.<br/></p>
 </li>
 <li>
-<p>These instructions will install <a href="https://github.com/GeoNode/geonode">Geonode</a> and Cartoview.</p>
+<p>Run the following command to download required packages  </p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> sudo apt-get update
+ sudo apt-get install python-virtualenv python-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev libjpeg-dev libpq-dev libgdal-dev git default-jdk
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Install Java 8 (needed by latest GeoServer 2.9)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-add-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+</pre></div>
+</td></tr></table></p>
+</li>
+</ul>
+<h2 id="geonode-installation">Geonode Installation<a class="headerlink" href="#geonode-installation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Create and activate the virtualenv</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>virtualenv &lt;your_virtual_env_name&gt;
+source &lt;your_virtual_env_name&gt;/bin/activate
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>install pip</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install python-pip
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>install geonode</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install geonode
+sudo apt-get install python-gdal
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Create a symbolic link in your virtualenv</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ln -s /usr/lib/python2.7/dist-packages/osgeo  &lt;your_virtual_env_name&gt;/lib/python2.7/site-packages/osgeo
+</pre></div>
+</td></tr></table>
+
+</li>
+</ul>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Verify your installation is completed by adding any layer in <a href="https://github.com/GeoNode/geonode">Geonode</a></p>
+<p class="admonition-title">Note<p>Verify your installation is completed by adding any layer in <a href="https://github.com/GeoNode/geonode">Geonode</a></p>
+</p>
 </div>
+<ul>
+<li>Don't Forget <a href="./#installation-requirements">Installation requirements</a></li>
+</ul>
+<h2 id="database-installation-and-configuration">Database Installation and Configuration<a class="headerlink" href="#database-installation-and-configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>install postgreSQL database
+  <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install postgresql postgresql-contrib
+</pre></div>
+</td></tr></table></p>
 </li>
 <li>
-<p>Don't Forget <a href="./#installation-requirements">Installation requirements</a></p>
+<p>install postgis</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install postgis
+</pre></div>
+</td></tr></table>
+
 </li>
 <li>
-<p>Install <a href="https://github.com/GeoNode/geonode">Geonode=2.6</a></p>
+<p>install pgadmin</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> sudo apt-get install pgadmin3
+</pre></div>
+</td></tr></table>
+
 </li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note<p>for more Information on postgreSQL visit <a href="https://www.postgresql.org/download/linux/ubuntu/">postgresql</a></p>
+</p>
+</div>
+<ul>
+<li>database Configuration<ul>
+<li>open pgadmin</li>
+<li>create two new databases cartoView and cartoview_datastore</li>
+<li>add postgis extension to the created databases by running the following sql query
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>        create extension postgis
+</pre></div>
+</td></tr></table></li>
+</ul>
+</li>
+</ul>
+<h2 id="cartoview-libraries-installation">CartoView Libraries Installation<a class="headerlink" href="#cartoview-libraries-installation" title="Permanent link">&para;</a></h2>
+<ul>
 <li>
-<p>Install CartoView Libraries</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cartoview</span>
+<p>install cartview</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install cartoview
 </pre></div>
 </td></tr></table>
 
@@ -532,15 +677,11 @@
 
 </li>
 <li>
-<p>create people Table</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
+<p>create account Table</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate account
 </pre></div>
 </td></tr></table>
 
-<div class="admonition bug">
-<p class="admonition-title">Bug</p>
-<p>this command will fire an error ignore it</p>
-</div>
 </li>
 <li>
 <p>Create Rest of tables :</p>
@@ -578,7 +719,8 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Info</p>
-<p><strong>(Optional)</strong> if want to override any settings variable rename <code>local_settings.py.sample</code> to <code>local_settings.py</code> then override settings you want inside <code>local_settings.py</code></p>
+<p><strong>(Optional)</strong> if want to override any settings variable  (for example to change the
+  database password ,name or hostname ) rename<code>local_settings.py.sample</code> to <code>local_settings.py</code> then override settings you want inside <code>local_settings.py</code></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -612,6 +754,28 @@
 <li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
 </div>
+<h2 id="install-geoserver">install Geoserver<a class="headerlink" href="#install-geoserver" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Tomcat installation <a href="https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04">tomcat</a></li>
+<li>Download Geoserver war file <a href="http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war">here</a></li>
+<li>rename the war file to geoserver.war</li>
+<li>copy the war file inside webapps directory in tomcat</li>
+<li>
+<p>restart tomcat server</p>
+</li>
+<li>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>cartview must be up and running </p>
+</div>
+</li>
+<li>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>in Production Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></p>
+</div>
+</li>
+</ul>
 <h2 id="install-on-windows">Install On Windows<a class="headerlink" href="#install-on-windows" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Install <a href="https://www.python.org/">Python2.7</a><ul>
@@ -675,15 +839,11 @@
 
 </li>
 <li>
-<p>create People table</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate people
+<p>create account table</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate account
 </pre></div>
 </td></tr></table>
 
-<div class="admonition bug">
-<p class="admonition-title">Bug</p>
-<p>this command will fire an error ignore it</p>
-</div>
 </li>
 <li>
 <p>create rest of database tables
