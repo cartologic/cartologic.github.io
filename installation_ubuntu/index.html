@@ -573,15 +573,24 @@
 <p>Install <a href="https://www.python.org/">Python2.7</a></p>
 </li>
 <li>
-<p>Install <a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></p>
+<p>Install Django
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get update
+sudo apt-get install python-django
+</pre></div>
+</td></tr></table></p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>for more information on installation visit <a href="https://pypi.python.org/pypi/Django/1.8.7">1.8.7 &lt;= Django &lt;1.9a0</a></p>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">Docker users</p>
 <ul>
 <li>you need to install <a href="https://docs.docker.com/compose/install/">docker-compose</a></li>
 </ul>
 </div>
-</li>
-</ul>
 <h2 id="install-on-ubuntu-linux">Install On Ubuntu linux<a class="headerlink" href="#install-on-ubuntu-linux" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Run the following command to download required packages  <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
@@ -609,7 +618,7 @@
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Note<p>you can install pgadmin a postgreSQL GUI tool using : <code>sudo apt-get install pgadmin3</code></p>
+<p class="admonition-title">Note<p>you can install pgadmin ( postgreSQL GUI tool using ): <code>sudo apt-get install pgadmin3</code></p>
 </p>
 </div>
 <div class="admonition note">
@@ -618,24 +627,30 @@
 </div>
 <h2 id="database-configuration">Database Configuration<a class="headerlink" href="#database-configuration" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>we'll need to log into a user called postgres created by the installation to manage the database
+<li>you will need to log into a user called postgres created by the installation to manage the database
  <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo -i -u postgres
 </pre></div>
-</td></tr></table></p>
-</li>
-<li>
-<p>create two new databases cartoView and cartoview_datastore
+</td></tr></table></li>
+<li>change the postgres password
+ <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>psql
+\password
+</pre></div>
+</td></tr></table></li>
+<li>Exit out of the PostgreSQL prompt by typing
+ <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>\q
+</pre></div>
+</td></tr></table></li>
+<li>create two new databases cartoView and cartoview_datastore
  <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>createdb cartoview
 createdb cartoview_datastore
 </pre></div>
-</td></tr></table></p>
-</li>
+</td></tr></table></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>you can change the databases name but dont forget to change thier names in the local_settings.py file in cartoview project directory</p>
+<p>you can change the databases name but make sure to change thier names in the local_settings.py file in cartoview project directory</p>
 </div>
 <ul>
 <li>add postgis extension to the created databases</li>
