@@ -279,10 +279,60 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Installation - docker
+      </label>
     
     <a href="./" title="Installation - docker" class="md-nav__link md-nav__link--active">
       Installation - docker
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-notes" title="Deployment notes" class="md-nav__link">
+    Deployment notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-issues" title="Windows Issues" class="md-nav__link">
+    Windows Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-on-linux" title="Docker on Linux" class="md-nav__link">
+    Docker on Linux
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -295,18 +345,6 @@
   <li class="md-nav__item">
     <a href="../installation_vagrant/" title="Installation - vagrant" class="md-nav__link">
       Installation - vagrant
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../docker/" title="Docker" class="md-nav__link">
-      Docker
     </a>
   </li>
 
@@ -402,6 +440,43 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-notes" title="Deployment notes" class="md-nav__link">
+    Deployment notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-issues" title="Windows Issues" class="md-nav__link">
+    Windows Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-on-linux" title="Docker on Linux" class="md-nav__link">
+    Docker on Linux
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -416,9 +491,132 @@
                   <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation_docker.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Installation - docker</h1>
-                
-                
+                <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<ul>
+<li>be sure you installed all <a href="../installation_ubuntu/#installation-requirements">requirements</a></li>
+<li>Install <a href="https://www.docker.com/products/docker">Docker</a></li>
+<li>For Windows User install <code>make</code> by<ul>
+<li>installing <a href="http://www.msys2.org/">MSYS2</a></li>
+<li>open msys shell and install <code>make</code> using this command <code>pacman -S make</code></li>
+<li>add <code>&lt;msys_path&gt;\usr\bin</code> to <code>PATH</code> envirnment variable</li>
+</ul>
+</li>
+<li>for windows users please use <code>Docker Quickstart Terminal</code> to execute the following commands</li>
+<li>
+<p>Create Cartoview Project which contains required files to run and configure Docker using this command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">--</span><span class="n">name</span> <span class="n">django</span><span class="o">.</span><span class="n">env</span><span class="p">,</span><span class="n">uwsgi</span><span class="o">.</span><span class="n">ini</span><span class="p">,</span><span class="o">.</span><span class="n">bowerrc</span><span class="p">,</span><span class="n">server</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Replace <code>&lt;your_project_name&gt;</code> with the desired name</p>
+</li>
+<li>
+<p>Go to your project Folder</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+</li>
+<li>
+<p>Open <code>docker-compose.yml</code> and Look at the port numbers for GeoServer and Postges and change the number before the <code>:</code> this will be the port on your machine</p>
+<div class="admonition tip">
+<p class="admonition-title">Tips<ul>
+<li>any file with <code>.env</code> EXTENSION Is a file that contains environment variables passed to specific container for example <code>django.env</code> file contains environment variables passed to Cartoview container so django can read these variables and use them</li>
+<li>default database username: <code>cartologic</code> and password: <code>root</code></li>
+<li>default database user in <code>postgis.env</code> file in your project if want to change it.</li>
+<li>If you want to run this project with a domain :<ul>
+<li>change <code>django.env</code>(this is the file of the common django setting variables) file in your Project Folder to be some thing like this:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">cartoview</span>
+<span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;</span>
+<span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></li>
+</ul>
+</li>
+<li>For windows users the default IP aasigned to docker is : <code>192.168.99.100</code> so the default django.env file must be some thing like this:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">cartoview</span>
+<span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">99.100</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
+<span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">99.100</span>
+<span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
+</pre></div>
+</td></tr></table></li>
+</ul>
+</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>For windows Users Please Comment volumes lines of postgis Container only in <code>docker-compose.yml</code> by preceding the line with <code>#</code> something like this:
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="c1">#   volumes:</span>
+    <span class="c1">#      - pgdata:/var/lib/postgresql</span>
+</pre></div>
+</td></tr></table></li>
+<li>if <code>django-admin.py</code> not working try <code>django-admin</code></li>
+</ul>
+</div>
+</li>
+<li>
+<p>Start Docker images(cartoview,geoserver,postgres) type :</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make run
+</pre></div>
+</td></tr></table>
+
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Now you can Access cartoview on <code>http://localhost</code> or <code>http://&lt;your_domain_or_ip&gt;</code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Final step Configure Geoserver before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">here</a></p>
+</div>
+</li>
+</ul>
+<h2 id="deployment-notes">Deployment notes<a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+Once CartoView is installed is expected to install all apps from the app store automatically
+CartoView will not be able to restart docker when new apps install.
+After you install any new app or app update you will need to restart docker manually until this issue is addressed in the future<ul>
+<li>follow these steps to get apps working on nginx<ul>
+<li>collect static files using this commands in your project folder
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make collect_static
+</pre></div>
+</td></tr></table></li>
+<li>restart server now with the following command you should restart server after installing any app
+    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker-compose restart cartoview
+</pre></div>
+</td></tr></table></li>
+</ul>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<h2 id="windows-issues">Windows Issues<a class="headerlink" href="#windows-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Docker volumes have some issues  with windows so you have to backup your postgres database.</li>
+</ul>
+<h2 id="docker-on-linux">Docker on Linux<a class="headerlink" href="#docker-on-linux" title="Permanent link">&para;</a></h2>
+<ul>
+<li>you will Find all postgres data in pgdata folder</li>
+</ul>
                 
                   
                 
