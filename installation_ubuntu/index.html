@@ -679,30 +679,65 @@ CREATE EXTENSION postgis;
 </div>
 <h2 id="install-geoserver">install Geoserver<a class="headerlink" href="#install-geoserver" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p>Install Java 8 (needed by latest GeoServer 2.9)
+<li>Install Java 8 (needed by latest GeoServer 2.9)
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-add-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 </pre></div>
-</td></tr></table></p>
-</li>
+</td></tr></table></li>
+</ul>
+<p>1) Download  <a href="https://tomcat.apache.org/download-90.cgi">tomcat v9</a></p>
+<p>2) Extract the tar folder and rename to tomcat</p>
+<p>3) Download Geoserver war file <a href="http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war">here</a></p>
+<p>4) Rename the war file to geoserver.war</p>
+<p>5) Copy the war file inside webapps directory in tomcat</p>
+<p>6) Create tomcat user we will do this by editing the tomcat-users.xml file:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>        sudo nano path/to/tomcat/conf/tomcat-users.xml
+</pre></div>
+</td></tr></table>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>make sure to change path/to/tomcat in the previous command with your tomcat path</p>
+</div>
+<p>7) Paste the following line
+<code>&lt;user username="admin" password="password"roles="manager-gui,admin-gui"/&gt;</code>
+just before <code>&lt;/tomcat-users &gt;</code>
+at the end of the file and change the username and password</p>
+<p>8) Edit context files in host-manager directory</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> sudo nano path/to/tomcat/webapps/host-manager/META-INF/context.xml
+</pre></div>
+</td></tr></table>
+
+<p>9) Comment the line <code>&lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;</code> by changing it to
+                 <code>&lt;!--&lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"
+                                 allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;--&gt;</code></p>
+<p>10) Edit context files in manager directory</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo nano path/to/tomcat/webapps/manager/META-INF/context.xml
+</pre></div>
+</td></tr></table>
+
+<p>11) Comment the line <code>&lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"
+        allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;</code>  by changing it to
+                <code>&lt;!--&lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"
+                                allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;--&gt;</code>  </p>
+<ul>
+<li>start tomcat server</li>
+</ul>
+<p><code>sh path/to/your/tomcat/bin/startup.sh</code></p>
+<ul>
 <li>
-<p>Tomcat installation <a href="https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04">tomcat</a></p>
-</li>
-<li>Download Geoserver war file <a href="http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war">here</a></li>
-<li>rename the war file to geoserver.war</li>
-<li>copy the war file inside webapps directory in tomcat</li>
-<li>
-<p>restart tomcat server</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+  For more information on installation and Configuration of tomcat visit <a href="https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-8-on-ubuntu-16-04">tomcat</a></div>
 </li>
 <li>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>cartview must be up and running</p>
-</div>
+cartview must be up and running</div>
 </li>
 <li>
 <div class="admonition warning">
@@ -760,69 +795,50 @@ sudo apt-get install python-gdal
 <ul>
 <li>
 <p>install cartview</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install cartoview
-</pre></div>
-</td></tr></table>
-
+<p><code>pip install cartoview</code></p>
 </li>
 <li>
 <p>Install CartoView_Django Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py &lt;your_project_name&gt;</code></p>
 </li>
 <li>
 <p>Go to your Project Folder</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+cd &lt;your_project_name&gt;</code></p>
 </li>
 <li>
 <p>Detect changes in <code>app_manager</code> App</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py makemigrations app_manager
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py makemigrations app_manager</code></p>
 </li>
 <li>
 <p>create account Table</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate account
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py migrate account</code></p>
 </li>
 <li>
 <p>Create Rest of tables :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py migrate</code></p>
 </li>
 <li>
 <p>load default User</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata sample_admin.json
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py loaddata sample_admin.json</code></p>
 </li>
 <li>
 <p>load default oauth app</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata json/default_oauth_apps.json
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py loaddata json/default_oauth_apps.json</code></p>
 </li>
 <li>
 <p>Test Server (Development)</p>
 <ul>
 <li>
 <p>To start Development Server run this Command :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py runserver 0.0.0.0:8000</code></p>
 </li>
 </ul>
 </li>
@@ -844,22 +860,18 @@ sudo apt-get install python-gdal
 </li>
 <li>
 <p>Load Default Store</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py loaddata app_stores.json
-</pre></div>
-</td></tr></table>
-
+<p><code>sh
+python manage.py loaddata app_stores.json</code></p>
 </li>
 <li>
 <p>Install <a href="https://nodejs.org/en/">nodejs</a> and then install <a href="https://bower.io/">bower</a> we need them to install app_manager dependencies</p>
 </li>
 <li>in this step we will install required files in your project folder type :
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bower install
-</pre></div>
-</td></tr></table></li>
+    <code>sh
+    bower install</code></li>
 <li>Collect Required files type:
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table></li>
+    <code>sh
+    python manage.py collectstatic --noinput</code></li>
 <li>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a></li>
 <li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
 </ul>
@@ -882,9 +894,8 @@ After you install or update apps from the app manager page you will need to rest
 <ul>
 <li>follow these steps to get apps working on nginx<ul>
 <li>collect static files using this commands
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table></li>
+    <code>sh
+    python manage.py collectstatic --noinput</code></li>
 <li>restart server now you should restart server after installing any app</li>
 </ul>
 </li>
