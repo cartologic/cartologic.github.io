@@ -46,12 +46,15 @@
     </url>
         
     <url>
+<<<<<<< HEAD
      <loc>http://www.cartologic.com//docker/</loc>
      <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
+=======
+>>>>>>> 8148a0a79795db1dcc32fbc2bd6fa90e2eb48006
      <loc>http://www.cartologic.com//market/</loc>
      <lastmod>2017-07-09</lastmod>
      <changefreq>daily</changefreq>
