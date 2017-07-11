@@ -787,46 +787,38 @@ sudo apt-get install python-gdal
 </li>
 <li>
 <p>Install CartoView_Django Project</p>
-<p><code>sh
-django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py &lt;your_project_name&gt;</code></p>
+<p><code>django-admin.py startproject --template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py &lt;your_project_name&gt;</code></p>
 </li>
 <li>
 <p>Go to your Project Folder</p>
-<p><code>sh
-cd &lt;your_project_name&gt;</code></p>
+<p><code>cd &lt;your_project_name&gt;</code></p>
 </li>
 <li>
 <p>Detect changes in <code>app_manager</code> App</p>
-<p><code>sh
-python manage.py makemigrations app_manager</code></p>
+<p><code>python manage.py makemigrations app_manager</code></p>
 </li>
 <li>
 <p>create account Table</p>
-<p><code>sh
-python manage.py migrate account</code></p>
+<p><code>python manage.py migrate account</code></p>
 </li>
 <li>
 <p>Create Rest of tables :</p>
-<p><code>sh
-python manage.py migrate</code></p>
+<p><code>python manage.py migrate</code></p>
 </li>
 <li>
 <p>load default User</p>
-<p><code>sh
-python manage.py loaddata sample_admin.json</code></p>
+<p><code>python manage.py loaddata sample_admin.json</code></p>
 </li>
 <li>
 <p>load default oauth app</p>
-<p><code>sh
-python manage.py loaddata json/default_oauth_apps.json</code></p>
+<p><code>python manage.py loaddata json/default_oauth_apps.json</code></p>
 </li>
 <li>
 <p>Test Server (Development)</p>
 <ul>
 <li>
 <p>To start Development Server run this Command :</p>
-<p><code>sh
-python manage.py runserver 0.0.0.0:8000</code></p>
+<p><code>python manage.py runserver 0.0.0.0:8000</code></p>
 </li>
 </ul>
 </li>
@@ -848,20 +840,20 @@ python manage.py runserver 0.0.0.0:8000</code></p>
 </li>
 <li>
 <p>Load Default Store</p>
-<p><code>sh
-python manage.py loaddata app_stores.json</code></p>
+<p><code>python manage.py loaddata app_stores.json</code></p>
 </li>
 <li>
 <p>Install <a href="https://nodejs.org/en/">nodejs</a> and then install <a href="https://bower.io/">bower</a> we need them to install app_manager dependencies</p>
 </li>
 <li>in this step we will install required files in your project folder type :
-    <code>sh
-    bower install</code></li>
-<li>Collect Required files type:
-    <code>sh
-    python manage.py collectstatic --noinput</code></li>
-<li>Now you Can Install Apps from <a href="http://www.cartoview.org">Geo App Market</a></li>
-<li>Go to <code>apps</code> tab and click <code>manage apps</code> Button and install app you want</li>
+    <code>bower install</code></li>
+<li>
+<p>Collect Required files type:
+    ```</p>
+<p>python manage.py collectstatic --noinput
+<code>- Now you Can Install Apps from [Geo App Market][2]
+- Go to</code>apps<code>tab and click</code>manage apps``` Button and install app you want</p>
+</li>
 </ul>
 </div>
 <h2 id="deployment-notes">Deployment notes<a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a></h2>
@@ -882,8 +874,7 @@ After you install or update apps from the app manager page you will need to rest
 <ul>
 <li>follow these steps to get apps working on nginx<ul>
 <li>collect static files using this commands
-    <code>sh
-    python manage.py collectstatic --noinput</code></li>
+    <code>python manage.py collectstatic --noinput</code></li>
 <li>restart server now you should restart server after installing any app</li>
 </ul>
 </li>

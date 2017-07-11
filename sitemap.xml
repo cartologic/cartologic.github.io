@@ -5,88 +5,79 @@
         
     <url>
      <loc>http://www.cartologic.com//</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//keys/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//demo/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//installation_ubuntu/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//installation_windows/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//installation_docker/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//installation_vagrant/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-<<<<<<< HEAD
-     <loc>http://www.cartologic.com//docker/</loc>
-     <lastmod>2017-07-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-=======
->>>>>>> 8148a0a79795db1dcc32fbc2bd6fa90e2eb48006
      <loc>http://www.cartologic.com//market/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//developers/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//upload_to_app_market/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//contrib/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//QA/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>http://www.cartologic.com//issues/</loc>
-     <lastmod>2017-07-09</lastmod>
+     <lastmod>2017-07-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
