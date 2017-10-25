@@ -277,8 +277,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263" title="This document describes the Installation of CartoView on ubunto with GeoNode 2.6.3" class="md-nav__link">
-    This document describes the Installation of CartoView on ubunto with GeoNode 2.6.3
+  <a href="#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263" title="This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3" class="md-nav__link">
+    This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3
   </a>
   
 </li>
@@ -326,8 +326,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cartoview-libraries-installation" title="CartoView Libraries Installation" class="md-nav__link">
-    CartoView Libraries Installation
+  <a href="#cartoview-libraries-installation" title="Cartoview Libraries Installation" class="md-nav__link">
+    Cartoview Libraries Installation
   </a>
   
 </li>
@@ -438,7 +438,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../QA/" title="Frequently Asked Questions" class="md-nav__link">
+    <a href="../frequently%20Asked%20Questions/" title="Frequently Asked Questions" class="md-nav__link">
       Frequently Asked Questions
     </a>
   </li>
@@ -482,8 +482,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263" title="This document describes the Installation of CartoView on ubunto with GeoNode 2.6.3" class="md-nav__link">
-    This document describes the Installation of CartoView on ubunto with GeoNode 2.6.3
+  <a href="#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263" title="This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3" class="md-nav__link">
+    This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3
   </a>
   
 </li>
@@ -531,8 +531,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cartoview-libraries-installation" title="CartoView Libraries Installation" class="md-nav__link">
-    CartoView Libraries Installation
+  <a href="#cartoview-libraries-installation" title="Cartoview Libraries Installation" class="md-nav__link">
+    Cartoview Libraries Installation
   </a>
   
 </li>
@@ -561,8 +561,8 @@
                   <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation_ubuntu.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                <h1 id="cartoview">CartoView<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
-<h2 id="this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263">This document describes the Installation of CartoView on ubunto with GeoNode 2.6.3<a class="headerlink" href="#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263" title="Permanent link">&para;</a></h2>
+                <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
+<h2 id="this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263">This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3<a class="headerlink" href="#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In case of any other version of GeoNode before 2.5 these steps will not be applicable.</p>
@@ -635,16 +635,16 @@ sudo apt-get install python-django
  <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>\q
 </pre></div>
 </td></tr></table></li>
-<li>Create two new databases cartoView and cartoview_datastore
+<li>Create two new databases Cartoview and Cartoview_datastore
  <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>createdb cartoview
-createdb cartoview_datastore
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>createdb Cartoview
+createdb Cartoview_datastore
 </pre></div>
 </td></tr></table></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can change the databases' name but make sure to change thier names in the local_settings.py file in cartoview project directory</p>
+<p>You can change the databases' name but make sure to change thier names in the local_settings.py file in Cartoview project directory</p>
 </div>
 <ul>
 <li>Add PostGIS extension to the created databases</li>
@@ -769,15 +769,15 @@ sudo apt-get install python-gdal
 <p class="admonition-title">Note<p>To Verify installation add any layer in [Geonode][1]</p>
 </p>
 </div>
-<h2 id="cartoview-libraries-installation">CartoView Libraries Installation<a class="headerlink" href="#cartoview-libraries-installation" title="Permanent link">&para;</a></h2>
+<h2 id="cartoview-libraries-installation">Cartoview Libraries Installation<a class="headerlink" href="#cartoview-libraries-installation" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Install CartoView</p>
-<p><code>pip install cartoview</code></p>
+<p>Install Cartoview</p>
+<p><code>pip install Cartoview</code></p>
 </li>
 <li>
-<p>Install CartoView_Django Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject template=https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py &lt;your_project_name&gt;
+<p>Install Cartoview_Django Project</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py &lt;your_project_name&gt;
 </pre></div>
 </td></tr></table>
 
@@ -846,7 +846,7 @@ by running this Command :</p>
 <p class="admonition-title">Apps From GeoApp Market</p>
 <ul>
 <li>
-<p>To Install apps from <a href="http://www.cartoview.org">GeoApp Market</a></p>
+<p>To Install apps from <a href="http://www.Cartoview.org">GeoApp Market</a></p>
 </li>
 <li>
 <p>Load Default Store</p>
@@ -876,10 +876,10 @@ In Production Configure GeoServer before uploading layers from <a href="http://d
 <li>
 <div class="admonition warning">
 <p class="admonition-title">Important</p>
-<p>Once CartoView is installed it is expected to install all apps from the App Store automatically
-At the moment CartoView will fully support Apache server only
-For nginx deployments, CartoView will be able to detect new apps and get the updates, how ever to apply the updates, web server restart will be required to complete    the process
-CartoView will not be able to restart nginx when new apps are installed.
+<p>Once Cartoview is installed it is expected to install all apps from the App Store automatically
+At the moment Cartoview will fully support Apache server only
+For nginx deployments, Cartoview will be able to detect new apps and get the updates, how ever to apply the updates, web server restart will be required to complete    the process
+Cartoview will not be able to restart nginx when new apps are installed.
 After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future</p>
 <ul>
 <li>Follow these steps to get apps working on nginx<ul>

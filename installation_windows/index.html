@@ -289,8 +289,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="This document describes the Installation of CartoView with GeoNode on Windows 2.6.3" class="md-nav__link">
-    This document describes the Installation of CartoView with GeoNode on Windows 2.6.3
+  <a href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3" class="md-nav__link">
+    This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3
   </a>
   
 </li>
@@ -410,7 +410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../QA/" title="Frequently Asked Questions" class="md-nav__link">
+    <a href="../frequently%20Asked%20Questions/" title="Frequently Asked Questions" class="md-nav__link">
       Frequently Asked Questions
     </a>
   </li>
@@ -454,8 +454,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="This document describes the Installation of CartoView with GeoNode on Windows 2.6.3" class="md-nav__link">
-    This document describes the Installation of CartoView with GeoNode on Windows 2.6.3
+  <a href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3" class="md-nav__link">
+    This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3
   </a>
   
 </li>
@@ -506,7 +506,7 @@
                 
                 
                 <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
-<h3 id="this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263">This document describes the Installation of CartoView with GeoNode on Windows 2.6.3<a class="headerlink" href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="Permanent link">&para;</a></h3>
+<h3 id="this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263">This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3<a class="headerlink" href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="Permanent link">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In case of any other version of GeoNode before 2.5 these steps will not be applicable.</p>
@@ -538,20 +538,20 @@
 </li>
 </ul>
 <h2 id="existing-geonode-users">Existing GeoNode Users<a class="headerlink" href="#existing-geonode-users" title="Permanent link">&para;</a></h2>
-<p>Check GeoNode and CartoView version compatibility in <a href="https://pypi.python.org/pypi/cartoview">PYPI</a> Then install CartoView</p>
+<p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/Cartoview">PYPI</a> Then install Cartoview</p>
 <h2 id="requirements">Requirements:<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>GeoNode == 2.6.3</p>
 <ul>
 <li>
-<p>Install CartoView Libraries</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">cartoview</span> <span class="o">==</span> &lt;version&gt;
+<p>Install Cartoview Libraries</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">Cartoview</span> <span class="o">==</span> &lt;version&gt;
 </pre></div>
 </td></tr></table>
 
 </li>
 <li>
-<p>Create CartoView Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
+<p>Create Cartoview Project</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
 </pre></div>
 </td></tr></table>
 
@@ -608,10 +608,10 @@ In Production Configure GeoServer before uploading layers from <a href="http://d
 <div class="admonition notes">
 <p class="admonition-title">Notes</p>
 <ul>
-<li>Once CartoView is installed it is expected to install all apps from the App store automatically</li>
-<li>At the moment CartoView will fully support Apache server only
-For nginx deployments, CartoView will be able to detect new apps and get the updates, How ever to apply the updates, web server restart will be required to complete the process.</li>
-<li>CartoView will not be able to restart nginx when new apps are installed.</li>
+<li>Once Cartoview is installed it is expected to install all apps from the App store automatically</li>
+<li>At the moment Cartoview will fully support Apache server only
+For nginx deployments, Cartoview will be able to detect new apps and get the updates, How ever to apply the updates, web server restart will be required to complete the process.</li>
+<li>Cartoview will not be able to restart nginx when new apps are installed.</li>
 <li>After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future</li>
 <li>Follow these steps to get apps working on nginx<ul>
 <li>Collect static files using this commands
