@@ -49,22 +49,17 @@
             "location": "/installation_ubuntu/#cartoview", 
             "text": "", 
             "title": "Cartoview"
-        }, 
+        },
         {
-            "location": "/installation_ubuntu/#this-document-describes-the-installation-of-cartoview-on-ubunto-with-geonode-263", 
-            "text": "Warning  In case of any other version of GeoNode before 2.5 these steps will not be applicable.", 
-            "title": "This document describes the Installation of Cartoview on ubunto with GeoNode 2.6.3"
+            "location": "/installation_ubuntu/#introduction", 
+            "text": "", 
+            "title": "This document describes the installation of Cartoview on Ubuntu 18.04 with GeoNode 2.10.3"
         }, 
         {
             "location": "/installation_ubuntu/#installation-requirements", 
             "text": "Install  Python2.7 .    Install Django 1\n2 sudo apt-get update\nsudo apt-get install python-django      Note  For more information about Djano installation visit  1.8.7  = Django  1.9a0 .", 
             "title": "Installation Requirements"
-        }, 
-        {
-            "location": "/installation_ubuntu/#install-required-packages-on-ubuntu-linux", 
-            "text": "Run the following command   1\n2  sudo apt-get update\n sudo apt-get install python-virtualenv python-dev libxml2 libxml2-dev libxslt1-dev zlib1g-dev libjpeg-dev libpq-dev libgdal-dev git default-jdk", 
-            "title": "Install Required Packages on ubuntu linux"
-        }, 
+        },  
         {
             "location": "/installation_ubuntu/#database-installation", 
             "text": "Install PostgreSQL Database\n     1 sudo apt-get install postgresql postgresql-contrib     Install PostGIS ( Extension to support Geographic objects that allows location queries to be run in SQL. )  1 sudo apt-get install postgis      Note you can install pgAdmin ( PostgreSQL GUI tool using ):  sudo apt-get install pgadmin3     Note For more Information about PostgreSQL visit  postgresql .", 
