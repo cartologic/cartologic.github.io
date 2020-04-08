@@ -8,7 +8,7 @@
     <meta name="author" content="Cartologic">
     <link rel="shortcut icon" href="../assets/images/favicon.png">
     <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.2">
-    <title>Installation - ubuntu - Cartologic</title>
+    <title>Cartoview Installation | Ubuntu</title>
     <script src="../assets/javascripts/modernizr-56ade86843.js"></script>
     <link rel="stylesheet" href="../assets/stylesheets/application-e2807e330f.css">
     <link rel="stylesheet" href="../assets/stylesheets/application-f78e5cb881.palette.css">
@@ -43,7 +43,7 @@
             <span class="md-header-nav__parent">
               Cartoview
             </span>
-            Installation - ubuntu
+            Installation | Ubuntu
           </span>
         </div>
       
@@ -199,8 +199,8 @@
                                   </li>
 
                                   <li class="md-nav__item">
-                                    <a href="#install-geoserver" title="Install GeoServer" class="md-nav__link">
-                                      Install GeoServer
+                                    <a href="#install-geoserver" title="GeoServer 2.16.2 Installation" class="md-nav__link">
+                                      GeoServer 2.16.2 Installation 
                                     </a>
                                   </li>
                                           
@@ -323,8 +323,8 @@
                   </li>
 
                   <li class="md-nav__item">
-                    <a href="#install-geoserver" title="Install GeoServer" class="md-nav__link">
-                      Install GeoServer
+                    <a href="#install-geoserver" title="GeoServer 2.16.2 Installation" class="md-nav__link">
+                      GeoServer 2.16.2 Installation
                     </a>
                   </li>
                   
@@ -350,43 +350,41 @@
               Introduction
               <a class="headerlink" href="#introduction" title="Permanent link">&para;</a>
             </h2>
-            <p>This document describes the installation of Cartoview on Ubuntu 18.04 with GeoNode 2.10.3</p>
+            <p>This document describes the installation of Cartoview with GeoNode 2.10.3 on Ubuntu 18.04</p>
             
             <h2 id="installation-requirements">
               Installation Requirements
               <a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a>
             </h2>
-            
-            <ul>
-              <li>
-                <p>Install <a href="https://www.python.org/download/releases/2.7/">Python2.7</a> and Django.</p>
-              </li>
-            </ul> 
-            
-            <table class="codehilitetable">
-              <tr>
-                <td class="linenos">
-                  <div class="linenodiv">
-                    <pre>1
-2</pre>
-                  </div>
-                </td>
-                <td class="code">
-                  <div class="codehilite">
-                    <pre><span></span>sudo apt-get update
-sudo apt-get install python-pip python-django</pre>
-                  </div>
-                </td>
-              </tr>
-            </table>
-              
-              <div class="admonition note">
-                <p class="admonition-title">Note</p>
-                <p>This will install the latest compatible with Python2.7 version of django which is 1.11.11 for now.</p>
-              </div>
               
               <ul>
-                <li>Install the following required packages.
+                <li>
+                  <h4>Install <a href="https://www.python.org/download/releases/2.7/">Python2.7</a> and Django.</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>sudo apt-get update
+sudo apt-get install python-pip python-django</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+              
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>This will install the latest compatible with Python2.7 version of django which is 1.11.11 for now.</p>
+                  </div>
+                </li>
+                
+                <li>
+                  <h4>Install the following required packages.</h4>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -404,9 +402,7 @@ sudo apt-get install python-virtualenv python-dev python-gdal libxml2 libxml2-de
                       </td>
                     </tr>
                   </table>
-                </li>
-                <li>
-                  Verify that the important packages are installed successfully. (The versions should be something like what after #)
+                  <p>Verify that the important packages are installed successfully. (The versions should be something like what after #)</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -437,29 +433,28 @@ python -c "from osgeo import gdal; print gdal.__version__"  #2.2.3</pre>
               </h2>
               <ul>
                 <li>
-                  <p>Install PostgreSQL Database
-                    <table class="codehilitetable">
-                      <tr>
-                        <td class="linenos">
-                          <div class="linenodiv">
-                            <pre>1
+                  <h4>Install PostgreSQL Database</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
 2</pre>
-                          </div>
-                        </td>
-                        <td class="code">
-                          <div class="codehilite">
-                            <pre><span></span>sudo apt-get update
-sudo apt-get install postgresql postgresql-contrib
-</pre>
-                          </div>
-                        </td>
-                      </tr>
-                    </table>
-                  </p>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
                 </li>
                 
                 <li>
-                  <p>Install PostGIS ( Extension to support Geographic objects that allows location queries to be run in SQL. )</p>
+                  <h4>Install PostGIS</h4>
+                  <p>Extension to support Geographic objects that allows location queries to be run in SQL.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -500,7 +495,9 @@ sudo apt-get install postgresql postgresql-contrib
               </h2>
               
               <ul>
-                <li>You will need to log in with a user called postgres created by the installation to manage the database
+                <li>
+                  <h4>Configure PostgreSQL interactive terminal to create the databases</h4>
+                  <p>You will need to log in with a user called postgres created by the installation to manage the database.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -515,9 +512,7 @@ sudo apt-get install postgresql postgresql-contrib
                       </td>
                     </tr>
                   </table>
-                </li>
-
-                <li>Change the postgres user password
+                  <p>Change the postgres user password</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -541,9 +536,7 @@ sudo apt-get install postgresql postgresql-contrib
                       </td>
                     </tr>
                   </table>
-                </li>
-                
-                <li>Exit the PostgreSQL prompt by typing
+                  <p>Exit the PostgreSQL prompt by typing</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -555,7 +548,8 @@ sudo apt-get install postgresql postgresql-contrib
                   </table>
                 </li>
                 
-                <li>Create two new databases Cartoview and Cartoview_datastore
+                <li>
+                  <h4>Create two new databases <code>cartoview</code> and <code>cartoview_datastore</code></h4>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -572,66 +566,63 @@ createdb cartoview_datastore
                       </td>
                     </tr>
                   </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>You can change the databases' name but make sure to change thier names in the local_settings.py file in Cartoview directory.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>Add PostGIS extension to the created databases to deal with the geographic objects.</h4>
+                  <p>For <code>cartoview</code> database: (Copy the command before the hash symbol)</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv"><pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite"><pre><span></span>psql cartoview  # Executed at ubuntu terminal
+CREATE EXTENSION postgis; # Executed at psql terminal</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>Exit the PostgreSQL terminal with <code>\q</code></p>
+                  <p>For <code>cartoview_datastore</code> database: (Copy the command before the hash symbol)</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv"><pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite"><pre><span></span>psql cartoview_datastore  # Executed at ubuntu terminal
+CREATE EXTENSION postgis; # Executed at psql terminal</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <div class="admonition note">
+                    <p class="admonition-title">Notes</p>
+                    <p>The previous step must be done for the two databases, <code>cartoview and cartoview_datastore</code>.</p>
+                    <p>You can logout back to your user (other than postgres) by just typing <code>exit</code>.</p>
+                  </div>
                 </li>
               </ul>
-              
-              <div class="admonition note">
-                <p class="admonition-title">Note</p>
-                <p>You can change the databases' name but make sure to change thier names in the local_settings.py file in Cartoview project directory</p>
-              </div>
-              
-              <ul>
-                <li>Add PostGIS extension to the created databases to deal with the geographic objects.</li>
-              </ul>
-
-              <p>For <code>cartoview</code> database: (Copy the command before the hash symbol)</p>
-              <table class="codehilitetable">
-                <tr>
-                  <td class="linenos">
-                    <div class="linenodiv"><pre>1
-2</pre>
-                    </div>
-                  </td>
-                  <td class="code">
-                    <div class="codehilite"><pre><span></span>psql cartoview  # Executed at ubuntu terminal
-CREATE EXTENSION postgis; # Executed at psql terminal
-</pre>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-              <p>Exit the PostgreSQL terminal with <code>\q</code></p>
-              <p>For <code>cartoview_datastore</code> database: (Copy the command before the hash symbol)</p>
-              <table class="codehilitetable">
-                <tr>
-                  <td class="linenos">
-                    <div class="linenodiv"><pre>1
-2</pre>
-                    </div>
-                  </td>
-                  <td class="code">
-                    <div class="codehilite"><pre><span></span>psql cartoview_datastore  # Executed at ubuntu terminal
-CREATE EXTENSION postgis; # Executed at psql terminal
-</pre>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-
-              <div class="admonition note">
-                <p class="admonition-title">Notes</p>
-                <p>The previous step must be done for the two databases, <code>cartoview and cartoview_datastore</code>.</p>
-                <p>You can logout back to your user (other than postgres) by just typing <code>exit</code>.</p>
-              </div>
               
               <h2 id="geonode-2103-installation">
                 GeoNode 2.10.3 Installation
                 <a class="headerlink" href="#geonode-2103-installation" title="Permanent link">&para;</a>
               </h2>
               
-              <p>Follow these setps if you don't have Geonode installed on your Ubuntu machine.<br/></p>
+              <p>Follow these setps if you don't have GeoNode 2.10.3 installed on your Ubuntu machine.<br/></p>
               <ul>
                 <li>
+                  <h4>Create a Python Virtual Environment</h4>
                   <p>Let's make a directory called <code>cartoview_service</code> (You can name it whatever you prefer) that will contain two folders, python virtual environment and cartoview.</p>
                   <table class="codehilitetable">
                     <tr>
@@ -649,8 +640,6 @@ cd cartoview_service</pre>
                       </td>
                     </tr>
                   </table>
-                </li>
-                <li>
                   <p>Create and activate the python virtual environment, we will name it <code>cartoview_venv</code>.</p>
                   <div class="admonition note">
                     <p class="admonition-title">Note</p>
@@ -673,17 +662,16 @@ source cartoview_venv/bin/activate
                       </td>
                     </tr>
                   </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>You would notice how your prompt is now prefixed with the name of the virtual environment, <code>cartoview_venv</code> in our case.</p>
+                    <p>Make sure you have installed <code>python-pip</code> and <code>python-gdal</code> as we have done above. We will use them to install and run GeoNode and Cartoview.</p>
+                    <p>From now on, each command associated with geonode or cartoview must be executed while the virtual environment is activated.</p>
+                  </div>
                 </li>
-
-                <div class="admonition note">
-                  <p class="admonition-title">Note</p>
-                  <p>You would notice how your prompt is now prefixed with the name of the virtual environment, <code>cartoview_venv</code> in our case.</p>
-                  <p>Make sure you have installed <code>python-pip</code> and <code>python-gdal</code> as we have done above. We will use them to install and run GeoNode and Cartoview.</p>
-                  <p>From now on, each command associated with geonode or cartoview must be executed while the virtual environment is activated.</p>
-                </div>
                 
                 <li>
-                  <p>Install geonode 2.10.3</p>
+                  <h4>Install geonode 2.10.3</h4>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -699,28 +687,6 @@ source cartoview_venv/bin/activate
                     </tr>
                   </table>
                 </li>
-                
-                <li>
-                  <p>Create a symbolic link of OSGeo in your virtualenv needed by GDAL to run properly.</p>
-                  <table class="codehilitetable">
-                    <tr>
-                      <td class="linenos">
-                        <div class="linenodiv">
-                          <pre>1</pre>
-                        </div>
-                      </td>
-                      <td class="code">
-                        <div class="codehilite">
-                          <pre><span></span>ln -s /usr/lib/python2.7/dist-packages/osgeo  cartoview_venv/lib/python2.7/site-packages/osgeo</pre>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                  <div class="admonition note">
-                    <p class="admonition-title">Note</p>
-                    <p>The point of creating a symbolic link is to share the development source code of GDAL (which is installed previously at <code><a href="#installation-requirements">Installation Requirements</a></code> section) instead of copying it every time we need to use it inside a python virtual environment.</p>
-                  </div>
-                </li>
               </ul>
               
               <h2 id="cartoview-libraries-installation">
@@ -734,6 +700,7 @@ source cartoview_venv/bin/activate
               </div>
               <ul>
                 <li>
+                  <h4>Download and install Cartoview</h4>
                   <p>Download the latest version of cartoview by cloning the repository.</p>
                   <table class="codehilitetable">
                     <tr>
@@ -750,9 +717,6 @@ source cartoview_venv/bin/activate
                     </tr>
                   </table>
                   <p>This will create a directory called <code>cartoview</code> inside <code>cartoview_service</code> directory.</p>
-                </li>
-
-                <li>
                   <p>Now we need to install cartoview dependencies, but first go to <code>cartoview</code>directory.</p>
                   <table class="codehilitetable">
                     <tr>
@@ -775,14 +739,11 @@ pip install -e .</pre>
                     <p>Make sure you got the dot <code>.</code> when you copy the previous command.</p>
                   </div>
                 </li>
-                
+
                 <li>
-                  <p>Install Cartoview Project Template. We will call it <code>cartoview_project</code> (Pick the name, you wish of course.)</p>
-                  <div class="admonition note">
-                    <p class="admonition-title">Note</p>
-                    <p>You can install it at any directory, we will install it outside the <code>cartoview_service</code> directory.</p>
-                    <p>Make sure the virtual environment is still activated (If you see its name prefixed your prompt, you're good to go).</p>
-                  </div>
+                  <h4>Add the created databases to your <code>settings.py</code> file.</h4>
+                  <p>Go to <code>cartoview</code> directory, you will find inside it another folder called <code>cartoview</code>. Navigate inside it also.</p>
+                  <p>You should find a file called <code>local_settings.py.sample</code>. Remove the last word <code>sample</code>.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -792,18 +753,13 @@ pip install -e .</pre>
                       </td>
                       <td class="code">
                         <div class="codehilite">
-                          <pre><span></span>django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py cartoview_project</pre>
+                          <pre><span></span>cp local_settings.py.sample local_settings.py</pre>
                         </div>
                       </td>
                     </tr>
                   </table>
-                  <p>This will generate a folder called <code>cartoview_project</code> (or the name you have specified).</p>
-                  <p>Cartoview project template will take care of the initial setup of your project. It will generate all the code that is needed to establish a Django project which is based on Cartoview and GeoNode Frameworks.</p>
-                </li>
-                
-                <li>
-                  <p>Add the created databases to your <code>settings.py</code> file.</p>
-                  <p>Go to your Project Folder</p>
+                  <p>This will override the <code>settings.py</code> file with a configured another settings file which is <code>local_settings.py</code>.</p>
+                  <p>If you print the contents of <code>local_settings.py</code> with the below command.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -813,30 +769,12 @@ pip install -e .</pre>
                       </td>
                       <td class="code">
                         <div class="codehilite">
-                          <pre><span></span>cd cartoview_project</pre>
+                          <pre><span></span>cat local_settings.py</pre>
                         </div>
                       </td>
                     </tr>
                   </table>
-                  <p>If you view the files inside <code>cartoview_project</code>, you should find another folder with the same name. This folder contains the <code>local_settings.py</code> in which we shall add the databases.</p>
-                  <p>So, let's cd again to be inside the second <code>cartoview_project</code> and start editing <code>local_settings.py</code> file.</p>
-                  <table class="codehilitetable">
-                    <tr>
-                      <td class="linenos">
-                        <div class="linenodiv">
-                          <pre>1
-2</pre>
-                        </div>
-                      </td>
-                      <td class="code">
-                        <div class="codehilite">
-                          <pre><span></span>cd cartoview_project
-nano local_settings.py</pre>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                  <p>This will open the file in the editor, add the following lines to it.</p>
+                  <p>You can see the databases that we have created above inside <code>local_settings.py</code> as below.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -887,11 +825,64 @@ nano local_settings.py</pre>
                       </td>
                     </tr>
                   </table>
-                  <p>To close, press <code>Ctrl + x</code> and type <code>y</code> then press <code>Enter</code> to save the changes.</p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>If you want to override any variable settings (for example to change the database password ,name or hostname), you can do this inside <code>local_settings.py</code> to override the pre-configured settings in <code>settings.py</code>.</p>
+                  </div>
                 </li>
                 
                 <li>
-                  <p>Detect changes in <code>app_manager</code> App</p>
+                  <h4>Create a symbolic link of OSGeo in your virtualenv needed by GDAL to run properly.</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>ln -s /usr/lib/python2.7/dist-packages/osgeo  cartoview_venv/lib/python2.7/site-packages/osgeo</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>The point of creating a symbolic link is to share the development source code of GDAL (which is installed previously at <code><a href="#installation-requirements">Installation Requirements</a></code> section) instead of copying it every time we need to use it inside a python virtual environment.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>Install Cartoview Project Template</h4>
+                  <p>We will call it <code>cartoview_project</code> (Pick the name, you wish of course.)</p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>You can install it at any directory, we will install it outside the <code>cartoview_service</code> directory.</p>
+                    <p>Make sure the virtual environment is still activated (If you see its name prefixed your prompt, you're good to go).</p>
+                  </div>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py cartoview_project</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>This will generate a folder called <code>cartoview_project</code> (or the name you have specified).</p>
+                  <p>Cartoview project template will take care of the initial setup of your project. It will generate all the code that is needed to establish a Django project which is based on Cartoview and GeoNode Frameworks.</p>
+                </li>
+                
+                <li>
+                  <h4>Migrate & Load default data</h4>
+                  <p>Navigate to <code>cartoview_project</code></p>
+                  <p>Detect changes in the <code>app_manager</code></p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -906,9 +897,7 @@ nano local_settings.py</pre>
                       </td>
                     </tr>
                   </table>
-                </li>
 
-                <li>
                   <p>Create account Table:</p>
                   <table class="codehilitetable">
                     <tr>
@@ -924,9 +913,7 @@ nano local_settings.py</pre>
                       </td>
                     </tr>
                   </table>
-                </li>
-                
-                <li>
+
                   <p>Create the rest of the tables:</p>
                   <table class="codehilitetable">
                     <tr>
@@ -942,9 +929,7 @@ nano local_settings.py</pre>
                       </td>
                     </tr>
                   </table>
-                </li>
-                
-                <li>
+
                   <p>Load default User:</p>
                   <table class="codehilitetable">
                     <tr>
@@ -960,9 +945,7 @@ nano local_settings.py</pre>
                       </td>
                     </tr>
                   </table>
-                </li>
-                
-                <li>
+
                   <p>Load default oauth apps so that you will be able to authenticate with defined external server:</p>
                   <table class="codehilitetable">
                     <tr>
@@ -978,9 +961,7 @@ nano local_settings.py</pre>
                       </td>
                     </tr>
                   </table>
-                </li>
 
-                <li>
                   <p>Load default Initial Data for Cartoivew:</p>
                   <table class="codehilitetable">
                     <tr>
@@ -999,7 +980,7 @@ nano local_settings.py</pre>
                 </li>
 
                 <li>
-                  <p>Test Development Server by running this Command :</p>
+                  <h4>Test Development Server by running this Command</h4>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -1017,7 +998,7 @@ nano local_settings.py</pre>
                 </li>
 
                 <li>
-                  <p>Install Apps From <a href="http://www.Cartoview.org">GeoApp Market</a>:</p>
+                  <h4>Install Apps From <a href="http://www.Cartoview.org">GeoApp Market</a>:</h4>
                   <p>Load default Cartoview App Stores data:</p>
                   <table class="codehilitetable">
                     <tr>
@@ -1077,30 +1058,16 @@ nano local_settings.py</pre>
                 </li>
               </ul>
               
-              <div class="admonition note">
-                <p class="admonition-title">Info</p>
-                <p>
-                  <strong>(Optional)</strong> 
-                  if you want to override any  variable settings (for example to change the database password ,name or hostname ) rename<code>local_settings.py.sample</code> to <code>local_settings.py</code> then override settings you want inside <code>local_settings.py</code>
-                </p>
-              </div>
-              
-              <div class="admonition warning">
-                <p class="admonition-title">Warning</p>
-                <p>Don't Forget to Change <code>&lt;your_project_name&gt;</code> to desired name.</p>
-              </div>
-              
-
               <!-- Install GeoServer -->
               <h2 id="install-geoserver">
-                Install GeoServer
+                GeoServer 2.16.2 Installation
                 <a class="headerlink" href="#install-geoserver" title="Permanent link">&para;</a>
               </h2>
               
               <ul>
-                <h4>We need to install Tomcat to be able to run GeoServer inside it as a Java application.</h4>
+                <p>We need to install Tomcat to be able to run GeoServer inside it as a Java application.</p>
                 <li>
-                  <p>Install and configure Tomcat 9</p>
+                  <h4>Install and configure Tomcat 9</h4>
                   <div class="admonition warning">
                     <p class="admonition-title">Warning</p>
                     <p>Make sure you have installed <code>default-jdk</code> as we have done before.</p>
@@ -1451,6 +1418,7 @@ wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/lat
                       </td>
                     </tr>
                   </table>
+                  <p>This will cause Tomcat to serve GeoServer from the war file which we have put inside <code>tomcat/webapps</code>.</p>
                   <div class="admonition info">
                     <p class="admonition-title">Info</p>
                     <h4>Make sure that GeoServer is running:</h4>
@@ -1460,15 +1428,10 @@ wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/lat
                       <li>You should find GeoServer under Applications section started already.</li>
                     </ul>
                   </div>
-                  <h4>Besides the above note, you should see GeoServer up and running at <code>localhost:8080/geoserver</code>.</h4>
+                  <h4>Now GeoServer is up and running at <code>localhost:8080/geoserver</code>.</h4>
+                  <img alt="postgresql setup" src="../img/geoserver.png"/>
                 </li>
               </ul>
-              
-              <div class="admonition note">
-                <p class="admonition-title">Note</p>
-                For more information about Installation and Configuration of Tomcat 9
-                <a href="https://www.digitalocean.com/community/tutorials/install-tomcat-9-ubuntu-1804">Check this link</a>.
-              </div>
               
               <div class="admonition warning">
                 <p class="admonition-title">Important</p>
@@ -1527,7 +1490,7 @@ wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/lat
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Installation - windows
+                  Installation | Windows
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">

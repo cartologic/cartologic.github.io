@@ -21,7 +21,7 @@
     
     
       
-        <title>Installation - windows - Cartologic</title>
+        <title>Cartoview Installation | Windows</title>
       
     
     
@@ -86,7 +86,7 @@
                 </span>
               
             
-            Installation - windows
+            Installation | Windows
           
         </span>
       </div>
@@ -248,111 +248,91 @@
           
           
 
-
+  <!--
+    Edit HERE
+  -->
   <li class="md-nav__item">
-    <a href="../installation_ubuntu/" title="Installation - ubuntu" class="md-nav__link">
-      Installation - ubuntu
+    <a href="./" title="Installation" class="md-nav__link">
+      Installation
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Installation - windows
-      </label>
-    
-    <a href="./" title="Installation - windows" class="md-nav__link md-nav__link--active">
-      Installation - windows
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      <li class="md-nav__item">
+        <a href="../installation_ubuntu/" title="Installation - ubuntu" class="md-nav__link">
+          Ubuntu
+        </a>
+      </li>
+
+      <li class="md-nav__item md-nav__item--active">
+        <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+        <label class="md-nav__link md-nav__link--active" for="toc">
+          Windows
+        </label>
+        
+        <a href="./" title="Installation - windows" class="md-nav__link md-nav__link--active">
+          Windows
+        </a>
+        
+        <nav class="md-nav md-nav--secondary">
+          <label class="md-nav__title" for="toc">Table of contents</label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            <li class="md-nav__item">
+              <a href="#introduction" title="Introduction" class="md-nav__link">
+                Introduction
+              </a>
+            </li>
+            
+            <li class="md-nav__item">
+              <a href="#database-installation" title="Database Installation" class="md-nav__link">
+                Database Installation
+              </a>
+            </li>
+
+            <li class="md-nav__item">
+              <a href="#database-configuration" title="Database Configuration" class="md-nav__link">
+                Database Configuration
+              </a>
+            </li>
+          
+            <li class="md-nav__item">
+              <a href="#geonode-2103-installation" title="GeoNode 2.10.3 Installation" class="md-nav__link">
+                GeoNode 2.10.3 Installation
+              </a>
+            </li>
+
+            <li class="md-nav__item">
+              <a href="#cartoview-libraries-installation" title="Cartoview Libraries Installation" class="md-nav__link">
+                Cartoview Libraries Installation
+              </a>
+            </li>
+
+            <li class="md-nav__item">
+              <a href="#install-geoserver" title="GeoServer 2.16.2 Installation" class="md-nav__link">
+                GeoServer 2.16.2 Installation 
+              </a>
+            </li>
+          
+            <li class="md-nav__item">
+              <a href="#deployment-notes" title="Deployment Notes" class="md-nav__link">
+                Deployment Notes
+              </a>
+            </li>
+          </ul>
+        </nav>
+        
+      </li>
+
+      <li class="md-nav__item">
+        <a href="../installation_docker/" title="Installation - docker" class="md-nav__link">
+          Docker
+        </a>
+      </li>
       
-        <li class="md-nav__item">
-  <a href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3" class="md-nav__link">
-    This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation-requirements" title="Installation Requirements" class="md-nav__link">
-    Installation Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#existing-geonode-users" title="Existing GeoNode Users" class="md-nav__link">
-    Existing GeoNode Users
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" title="Requirements:" class="md-nav__link">
-    Requirements:
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-notes" title="Deployment Notes" class="md-nav__link">
-    Deployment Notes
-  </a>
-  
-</li>
-      
-      
-      
+      <li class="md-nav__item">
+        <a href="../installation_vagrant/" title="Installation - vagrant" class="md-nav__link">
+          Vagrant
+        </a>
+      </li>
     </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../installation_docker/" title="Installation - docker" class="md-nav__link">
-      Installation - docker
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../installation_vagrant/" title="Installation - vagrant" class="md-nav__link">
-      Installation - vagrant
-    </a>
   </li>
 
         
@@ -454,8 +434,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3" class="md-nav__link">
-    This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
   </a>
   
 </li>
@@ -466,26 +446,41 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#existing-geonode-users" title="Existing GeoNode Users" class="md-nav__link">
-    Existing GeoNode Users
+
+<li class="md-nav__item">
+  <a href="#database-installation" title="Database Installation" class="md-nav__link">
+    Database Installation
   </a>
-  
+</li>
+
+<li class="md-nav__item">
+  <a href="#database-configuration" title="Database Configuration" class="md-nav__link">
+    Database Configuration
+  </a>
 </li>
       
-        <li class="md-nav__item">
-  <a href="#requirements" title="Requirements:" class="md-nav__link">
-    Requirements:
+<li class="md-nav__item">
+  <a href="#geonode-2103-installation" title="GeoNode 2.10.3 Installation" class="md-nav__link">
+    GeoNode 2.10.3 Installation
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
+
+<li class="md-nav__item">
+  <a href="#cartoview-libraries-installation" title="Cartoview Libraries Installation" class="md-nav__link">
+    Cartoview Libraries Installation
+  </a>
+</li>
+
+<li class="md-nav__item">
+  <a href="#install-geoserver" title="GeoServer 2.16.2 Installation" class="md-nav__link">
+    GeoServer 2.16.2 Installation 
+  </a>
+</li>
+
+<li class="md-nav__item">
   <a href="#deployment-notes" title="Deployment Notes" class="md-nav__link">
     Deployment Notes
   </a>
-  
 </li>
       
       
@@ -500,138 +495,703 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
+              <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation_windows.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
               
-                
-                  <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation_windows.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
-                
-                
-                <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
-<h3 id="this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263">This document describes the Installation of Cartoview with GeoNode on Windows 2.6.3<a class="headerlink" href="#this-document-describes-the-installation-of-cartoview-with-geonode-on-windows-263" title="Permanent link">&para;</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>In case of any other version of GeoNode before 2.5 these steps will not be applicable.</p>
-</div>
-<h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Install <a href="https://www.python.org/download/releases/2.7/">Python2.7</a></p>
-<ul>
-<li>
-<p>Make Sure to add Python to the Path, as this is not done by default </p>
-</li>
-<li>
-<p>Add python.exe to the PATH
-<br/> <br/>
-    <img alt="python setup" src="../img/python.png" />
-    <img alt="python setup" src="../img/python2.png" /></p>
-<p><br/></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Install Django 1.8.7 
-     , Open Command Prompt then type:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">django</span><span class="o">==</span><span class="m">1</span>.8.7
-</pre></div>
-</td></tr></table>
+              <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
+              <h2 id="introduction">
+                Introduction
+                <a class="headerlink" href="#introduction" title="Permanent link">&para;</a>
+              </h2>
+              <p>This document describes the installation of Cartoview with GeoNode 2.10.3 on Windows 10</p>
 
-</li>
-</ul>
-<h2 id="existing-geonode-users">Existing GeoNode Users<a class="headerlink" href="#existing-geonode-users" title="Permanent link">&para;</a></h2>
-<p>Check GeoNode and Cartoview version compatibility in <a href="https://pypi.python.org/pypi/Cartoview">PYPI</a> Then install Cartoview</p>
-<h2 id="requirements">Requirements:<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
-<p>GeoNode == 2.6.3</p>
-<ul>
-<li>
-<p>Install Cartoview Libraries</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">Cartoview</span> <span class="o">==</span> &lt;version&gt;
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Create Cartoview Project</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>django-admin.py startproject --template<span class="o">=</span>https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Go to your Project Folder</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">cd</span> &lt;your_project_name&gt;
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Detect Changes in app_manager</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py makemigrations app_manager
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Create account table</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate account
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Create rest of database tables
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py migrate
-</pre></div>
-</td></tr></table></p>
-</li>
-<li>
-<p>Collect static Files</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table>
-
-</li>
-<li>
-<p>Now Development Server :
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py runserver <span class="m">0</span>.0.0.0:8000
-</pre></div>
-</td></tr></table></p>
-</li>
-</ul>
-<h2 id="deployment-notes">Deployment Notes<a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-In Production Configure GeoServer before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/users/managing_layers/upload.html">Here</a></div>
-</li>
-<li>
-<div class="admonition notes">
-<p class="admonition-title">Notes</p>
-<ul>
-<li>Once Cartoview is installed it is expected to install all apps from the App store automatically</li>
-<li>At the moment Cartoview will fully support Apache server only
-For nginx deployments, Cartoview will be able to detect new apps and get the updates, How ever to apply the updates, web server restart will be required to complete the process.</li>
-<li>Cartoview will not be able to restart nginx when new apps are installed.</li>
-<li>After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future</li>
-<li>Follow these steps to get apps working on nginx<ul>
-<li>Collect static files using this commands
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python manage.py collectstatic --noinput
-</pre></div>
-</td></tr></table></li>
-<li>Restart server now you should restart server after installing any app</li>
-</ul>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-                
-                  
-                
+              <h2 id="installation-requirements">
+                Installation Requirements
+                <a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a>
+              </h2>
               
-              
+              <ul>
+                <li>
+                  <h4>Install <a href="https://www.python.org/downloads/release/python-2717/">Python2.7</a></h4>
+                  <p>While installing python, we need to add it to the path so that we can use it inside the command prompt.</p>
+                  <h5>Instead of this:</h5>
+                  <img alt="python setup" src="../img/python.png" />
+                  <h5>Be this:</h5>
+                  <img alt="python setup" src="../img/python2.png" />
+                  <p>Then click <code>Next</code> then <code>Finish</code> to complete the installation.</p>
+                </li>
                 
+                <li>
+                  <h4>Create a Python Virtual Environment</h4>
+                  <p>Create a folder in the directory at which you want to install Cartoview and Let's name it <code>cartoview_service</code> (You can name it whatever you want).</p>
+                  <p>Inside <code>cartoview_service</code> folder, <code>right-click with left-Shift</code> and select <code>Open PowerShell window here</code>.</p>
+                  <img alt="Windows powershell" src="../img/powershell.png" >
+                  <p>This will open a terminal in which we will execute all the upcoming commands.</p>
+                  <p>Create a virtual environment and call it <code>cartoview_venv</code>.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv"><pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>virtualenv cartoview_venv
+</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <img alt="create ve" src="../img/powershell2.png" >
+                  <p>Now after creating the virtual environment, we need to activate so that we will be able to use it. Just type that in the powershell.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv"><pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>.\cartoview_venv\Scripts\activate</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Notes</p>
+                    <ul>
+                      <li>
+                        <p>If you are having an issue executing the above command, specifically if you got this error <code>cannot be loaded because the execution of scripts is disabled on this system</code>.</p>
+                        <p>Close current powershell session and open another but with the "Run as Administrator" option (You can search for the powershell inside the search bar).</p>
+                        <p>Inside the terminal session, execute this:</p>
+                        <table class="codehilitetable">
+                          <tr>
+                            <td class="linenos">
+                              <div class="linenodiv"><pre>1</pre>
+                              </div>
+                            </td>
+                            <td class="code">
+                              <div class="codehilite">
+                                <pre><span></span>set-executionpolicy remotesigned</pre>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <p>This will allow running unsigned scripts that you write on your local computer and signed scripts from Internet. Now, you can try activating the virtual environment again.</p>
+                      </li>
+
+                      <li>
+                        <p>You would notice how your prompt is now prefixed with the name of the virtual environment, <code>cartoview_venv</code> in our case.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>Install the following required packages</h4>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>From now on, each command must be executed inside the PowerShell while the virtual environment is activated.</p>
+                  </div>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>pip install django==1.11.11 GDAL==2.2.4 Shapely==1.6.4.post2 Pillow==6.2.2 libxml2-python==2.9.3 pytz==2019.3</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>If you got errors while installing the above packages, you can download the wheel files of the packages that cause these errors from <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">The Unofficial Windows Binaries for Python Packages</a>.</p>
+                    <p>For Example, to install <code>GDAL 2.2.4</code>:</p>
+                    <P>1. Download the wheel file of GDAL 2.2.4 that is compatible with Python 2.7 from the above link. You should get a file called, <code>GDAL-2.2.4-cp27-cp27m-win_amd64.whl</code>.</P>
+                    <p>2. While having the virtual environment <code>cartoview_venv</code> activated, navigate to the downloads folder (or the folder in which you have downloaded the wheel file), execute the following.</p>
+                    <table class="codehilitetable">
+                      <tr>
+                        <td class="linenos">
+                          <div class="linenodiv">
+                            <pre>1
+2</pre>
+                          </div>
+                        </td>
+                        <td class="code">
+                          <div class="codehilite">
+                            <pre><span></span>cd C:\Users\your_user\Downloads
+pip install GDAL-2.2.4-cp27-cp27m-win_amd64.whl</pre>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ul>
+
+              <h2 id="database-installation">
+                Database Installation
+                <a class="headerlink" href="#database-installation" title="Permanent link">&para;</a>
+              </h2>
+              <ul>
+                <li>
+                  <h4>Download PostgreSQL installer certified by EnterpriseDB from <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">here</a>. We will use version 10.12.</h4>
+                  <p>1. Open the downloaded exe and Click next on the install welcome screen.</p>
+                  <img alt="postgresql setup" src="../img/postgres1.png" />
+                  <p>2. Change the Installation directory if required, else leave it as default. Click Next</p>
+                  <p>3. You can choose the components that you want to be installed in your system. We will leave it as default.</p>
+                  <img alt="postgresql setup" src="../img/postgres2.png"/>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>This will install <code>pgAdmin4</code> which is a management tool for PostgreSQL database.</p>
+                  </div>
+                  <p>4. Leave the data location as default.</p>
+                  <p>5. Enter a super user password. This is the one by which you will access all your databases including what we will create next, so <strong>make a note of it</strong>.</p>
+                  <img alt="postgresql setup" src="../img/postgres3.png"/>
+                  <p>6. Leave the port number <code>5432</code> as default.</p>
+                  <img alt="postgresql setup" src="../img/postgres4.png"/>
+                  <p>7. Check the pre-installation summary.</p>
+                  <img alt="postgresql setup" src="../img/postgres5.png"/>
+                  <p>8. Click <code>Next</code> to start the installation.</p>
+                  <img alt="postgresql setup" src="../img/postgres6.png"/>
+                  <p>9. Wait for the installation to be completed.</p>
+                  <img alt="postgresql setup" src="../img/postgres7.png"/>
+                  <p>10. Make sure to leave that check on to open the stack builder after finishing.</p>
+                  <img alt="postgresql setup" src="../img/postgres8.png"/>
+                  <p>11. Select <code>PostgreSQL 10 (X64) on port 5432</code>.</p>
+                  <img alt="postgresql setup" src="../img/postgres9.png"/>
+                  <h4>Install PostGIS 2.4</h4>
+                  <img alt="postgresql setup" src="../img/postgres10.png"/>
+                  <p>12. Select <code>Next</code> to install PostGIS. This will download all the required files for it.</p>
+                  <p>13. Install PostGIS as usual. Click <code>Ok</code> for any prompt appears.</p>
+                  <img alt="postgresql setup" src="../img/postgres11.png"/>
+                  <p>Now the installation is completed.</p>
+                </li>
+
+                <li>
+                  <h4>Let's access pgAdmin4</h4>
+                  <p>In the search bar (beside windows icon), search for <code>pgAdmin4</code> application and run it.</p>
+                  <p>If you click on PostgreSQL under Servers panel, you will be prompted to enter the password that you set during the installation.</p>
+                  <img alt="postgresql setup" src="../img/postgres13.png"/>
+                  <p>You will see pgAdmin dashboard.</p>
+                  <img alt="postgresql setup" src="../img/postgres12.png"/>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>You may notice that there's a created databse called <code>postgres</code> that will be used to create Cartoview databases.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <h2 id="database-configuration">
+                Database Configuration
+                <a class="headerlink" href="#database-configuration" title="Permanent link">&para;</a>
+              </h2>
+              <ul>
+                <li>
+                  <h4>Create Cartoview databases using pgAdmin</h4>
+                  <p>Now we will create Cartoview databases. Particularly, <code>cartoview</code> and <code>cartoview_datastore</code>.</p>
+                  <p>1. Under PostgreSQL 10 tree, right click and select create a database.</p>
+                  <img alt="postgresql setup" src="../img/postgres14.png"/>
+                  <p>2. You will be prompted a pop-up to enter information about the database like the database name and template. Set the fields as in the images below.</p>
+                  <img alt="database configuration" src="../img/database1.png"/>
+                  <img alt="database configuration" src="../img/database2.png"/>
+                  <p>3. After creating the database, add <code>postgis</code> extension to it.</p>
+                  <img alt="database configuration" src="../img/postgis.png"/>
+                  <p>In the Name field, search for <code>postgis</code> and select it. Then click save.</p>
+                  <img alt="database configuration" src="../img/postgis2.png"/>
+                  <p>4. Repeat the steps from 1 to 3 to create the second database, <code>cartoview_datastore</code>.</p>
+                  <div class="admonition warning">
+                    <p class="admonition-title">Warning</p>
+                    <p>When repeating the steps to create the second database, don't forget to name the database in step 2 to be <code>cartoview_datastore</code>.</p>
+                  </div>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>For <strong>step 3</strong>, if you got the below error when you click save after selecting <code>postgis</code> extension.</p>
+                    <p><code>ERROR: could not load library "C:/Program Files/PostgreSQL/10/lib/rtpostgis-2.4.dll": %1 is not a valid Win32 application.</code></p>
+                    <p>Navigate to this path: <code>C:\Program Files\PostgreSQL\10\bin\postgisgui</code> in PostgreSQL installation directory and copy these files, <code>libeay32.dll</code> and <code>ssleay32.dll</code> to the bin path, <code>C:\Program Files\PostgreSQL\10\bin</code> and try to save again.</p>
+                    <p></p>
+                  </div>
+                </li>
+              </ul>
+
+              <h2 id="geonode-2103-installation">
+                GeoNode 2.10.3 Installation
+                <a class="headerlink" href="#geonode-2103-installation" title="Permanent link">&para;</a>
+              </h2>
+              <p>Follow these steps if you don't have GeoNode 2.10.3 installed on your Windows 10 machine.<br/></p>
+              <ul>
+                <li>
+                  <h4>Install GeoNode 2.10.3</h4>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>Make sure you're inside <code>cartoview_service</code> directory and the <code>cartoview_venv</code> is still activated.</p>
+                  </div>
+                  <p>Download <code>GeoNode 2.10.3</code> from this <a href="https://github.com/GeoNode/geonode/archive/2.10.3.zip">link</a>.</p>
+                  <p>Extract it in the directory of <code>cartoview_service</code> folder. This will make a folder called <code>geonode-2.10.3</code> that contains GeoNode instance.</p>
+                  <p>Now we need to navigate inside <code>geonode-2.10.3</code> folder and install the packages from <code>requirements.txt</code> file.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>cd geonode-2.10.3
+pip install -r requirements.txt --no-deps</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>Finally, install geonode from the current directory using the following command.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>pip install -e .</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition warning">
+                    <p class="admonition-title">Warning</p>
+                    <p>Make sure you got the dot <code>.</code> when you copy the previous command.</p>
+                  </div>
+                </li>
+              </ul>
+
+              <h2 id="cartoview-libraries-installation">
+                Cartoview Libraries Installation
+                <a class="headerlink" href="#cartoview-libraries-installation" title="Permanent link">&para;</a>
+              </h2>
+
+              <div class="admonition warning">
+                <p class="admonition-title">Warning</p>
+                <p>Make sure you're inside <code>cartoview_service</code> directory and the <code>cartoview_venv</code> is still activated.</p>
+              </div>
+
+              <ul>
+                <li>
+                  <h4>Download and install Cartoview</h4>
+                  <p>Download the latest version of cartoview by cloning the repository.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>git clone https://github.com/cartologic/cartoview.git</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>This will create a directory called <code>cartoview</code> inside <code>cartoview_service</code> directory.</p>
+                  <p>Now we need to install cartoview dependencies, but first go to <code>cartoview</code>directory.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>cd cartoview
+pip install -e .</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition warning">
+                    <p class="admonition-title">Warning</p>
+                    <p>Make sure you got the dot <code>.</code> when you copy the previous command.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>Add the created databases to your <code>settings.py</code> file.</h4>
+                  <p>Go to <code>cartoview</code> directory, you will find inside it another folder called <code>cartoview</code>. Navigate inside it.</p> 
+                  <p>You should find a file called <code>local_settings.py.sample</code>. Remove the last word <code>sample</code>.</p>
+                  <p>This will override the <code>settings.py</code> file with a configured another settings file which is <code>local_settings.py</code>.</p>
+                  <p>You can see the databases that we have created above inside <code>local_settings.py</code>:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>DATABASES = {
+  'default': {
+      'ENGINE': 'django.contrib.gis.db.backends.postgis',
+      'NAME': 'cartoview',
+      'USER': 'postgres',
+      'PASSWORD': 'cartoview',
+      'HOST': 'localhost',
+      'PORT': '5432',
+  },
+  # vector datastore for uploads
+  'datastore': {
+      'ENGINE': 'django.contrib.gis.db.backends.postgis’,
+      'NAME': 'cartoview_datastore',
+      'USER': 'postgres',
+      'PASSWORD': 'cartoview',
+      'HOST': 'localhost',
+      'PORT': '5432',
+  }
+}</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>If you want to override any variable settings (for example to change the database password ,name or hostname), you can do this inside <code>local_settings.py</code> to override the pre-configured settings in <code>settings.py</code>.</p>
+                  </div>
+                </li>
+
+                <li>
+                  <h4>Create a symbolic link of OSGeo into cartoview_venv needed by GDAL to run properly</h4>
+                  <p>Add the following lines inside <code>local_settings.py</code>, replacing <code>your_path</code> with the complete path to <code>cartoview_service</code> folder.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2
+3</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>os.environ['Path'] = r'your_path\cartoview_service\cartoview_venv\Lib\site-packages\osgeo;' + os.environ['Path']
+os.environ['GEOS_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\Lib\site-packages\osgeo\geos_c.dll'
+os.environ['GDAL_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\Lib\site-packages\osgeo\gdal202.dll'</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+
+                <li>
+                  <h4>Install Cartoview Project Template</h4>
+                  <p>We will call it <code>cartoview_project</code> (Pick the name, you wish of course.)</p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>You can install it at any directory, we will install it outside the <code>cartoview_service</code> directory.</p>
+                    <p>Make sure the virtual environment is still activated (If you see its name prefixed your prompt, you're good to go).</p>
+                  </div>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py cartoview_project</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>This will generate a folder called <code>cartoview_project</code> (or the name you have specified).</p>
+                  <p>Cartoview project template will take care of the initial setup of your project. It will generate all the code that is needed to establish a Django project which is based on Cartoview and GeoNode Frameworks.</p>
+                </li>
+
+                <li>
+                  <h4>Migrate & Load default data</h4>
+                  <p>Navigate to <code>cartoview_project</code></p>
+                  <p>Detect changes in <code>app_manager</code> App</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py makemigrations app_manager</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Create account Table:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py migrate account</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Create the rest of the tables:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py migrate</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Load default User:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata sample_admin.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Load default oauth apps so that you will be able to authenticate with defined external server:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata default_oauth_apps.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Load default Initial Data for Cartoivew:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata initial_data.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+
+                <li>
+                  <h4>Test Development Server by running this Command</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py runserver 0.0.0.0:8000</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </li>
+
+                <li>
+                  <h4>Install Apps From <a href="http://www.Cartoview.org">GeoApp Market</a></h4>
+                  <p>Load default Cartoview App Stores data:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata app_stores.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>Install 
+                    <a href="https://nodejs.org/en/">nodejs</a> 
+                    and then install 
+                    <a href="https://bower.io/">bower</a> 
+                    we need them to install app_manager dependencies
+                  </p>
+                  <p>Go to your project folder (in our case, cartoview_project) and do:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>bower install</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>Collect static files.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py collectstatic --no-input</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>
+                    Now you can install Apps from 
+                    <a href="http://www.Cartoview.org">GeoApp Market</a> 
+                    Go to Apps tab, click Manage Apps button, and install the app you want.
+                  </p>
+                </li>
+              </ul>
+
+              <h2 id="install-geoserver">
+                GeoServer 2.16.2 Installation
+                <a class="headerlink" href="#install-geoserver" title="Permanent link">&para;</a>
+              </h2>
+              <ul>
+                <li>
+                  <h4>Install JRE</h4>
+                  <p>Make sure you have a Java Runtime Environment (JRE) installed on your system. GeoServer requires a Java 8 environment. The Oracle JRE is preferred, but OpenJDK has been known to work adequately.  You can download <a href="https://www.oracle.com/java/technologies/javase-jre8-downloads.html">JRE 8 from Oracle.</a></p>
+                </li>
+
+                <li>
+                  <h4>Install Apache Tomcat 9</h4>
+                  <p>Download the windows installer from <a href="https://downloads.apache.org/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.exe">here</a>.</p>
+                  <p>While proceeding with the installer, make sure to check install <code>Host Manager</code>.</p>
+                  <img alt="postgresql setup" src="../img/tomcat1.png"/>
+                  <p>Configure Tomcat Web Management Interface by setting the admin credentials. We will set username to be <code>admin</code> and password to be <code>cartoview</code>.</p>
+                  <img alt="postgresql setup" src="../img/tomcat2.png"/>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>Make sure the <code>Roles</code> field contains <code>admin-gui,manager-gui</code>.</p>
+                  </div>
+                  <p>Proceed with the installation untill you have Tomcat 9 up and running and you can check it in Windows Services.</p>
+                </li>
+
+                <li>
+                  <h4>Download and install GeoServer war file</h4>
+                  <p>Now we will download the latest stable version of GeoServer war file from <a href="https://build.geo-solutions.it/geonode/geoserver/latest/geoserver-2.16.2.war">here</a>.</p>
+                  <p>You should get a war file called <code>geoserver-2.16.2.war</code>. For sake of simplicity, we will rename it to be <code>geoserver.war</code> instead of the previous.</p>
+                  <p>Copy the file and navigate to Tomcat installation directory and paste the war file inside <code>webapps</code> folder.</p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>Usually, Tomcat directory is at this path <code>C:\Program Files\Apache Software Foundation\Tomcat 9.0</code>.</p>
+                  </div>
+                  <p>In the search bar (beside windows icon), search for <code>Services</code> and run it. It should open to you all the running services on your windows machine.</p>
+                  <p>Navigate to a service called <code>Apache Tomcat 9.0 Tomcat9</code> and restart it.</p>
+                  <img alt="postgresql setup" src="../img/restart_tomcat.png"/>
+                  <p>This will cause Tomcat to serve GeoServer from the war file which we have put inside <code>Tomcat 9.0/webapps</code>.</p>
+                  <div class="admonition info">
+                    <p class="admonition-title">Info</p>
+                    <h4>Make sure that GeoServer is running:</h4>
+                    <ul>
+                      <li>Navigate to <code>localhost:8080</code> to open Tomcat then click on <code>Manager App</code>.</li>
+                      <li>Login with the credentials, you have entered during Tomcat installation.</li>
+                      <li>You should find GeoServer under Applications section started already.</li>
+                    </ul>
+                  </div>
+                  <h4>Now GeoServer is up and running at <code>localhost:8080/geoserver</code>.</h4>
+                  <img alt="postgresql setup" src="../img/geoserver.png"/>
+                </li>
+              </ul>
+
+              <div class="admonition warning">
+                <p class="admonition-title">Important</p>
+                <p>Cartview must be up and running</p>
+              </div>
               
+              <h2 id="deployment-notes">
+                Deployment Notes
+                <a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a>
+              </h2>
+              
+              <div class="admonition warning">
+                <p class="admonition-title">Important</p>
+                In Production Configure GeoServer before uploading layers from 
+                <a href="https://docs.geonode.org/en/2.10/advanced/components/index.html#geoserver-security-backend">
+                  here
+                </a>
+              </div>
+              <div class="admonition warning">
+                <p class="admonition-title">Important</p>
+                <p>Once Cartoview is installed it is expected to install all apps from the App Store automatically At the moment Cartoview will fully support Apache server only For nginx deployments, Cartoview will be able to detect new apps and get the updates, however to apply the updates, web server restart will be required to complete the process Cartoview will not be able to restart nginx when new apps are installed. After you install or update apps from the app manager page you will need to restart nginx manually until this issue is addressed in the future</p>
+                
+                <p>Follow these steps to get apps working on nginx:</p>
+                <ul>
+                  <li>Collect static files using this commands
+                    <code>python manage.py collectstatic --noinput</code>
+                  </li>
+                  <li>Restart server now you should restart server after installing any app</li>
+                </ul>
+              </div>
             </article>
           </div>
         </div>
@@ -652,7 +1212,7 @@ For nginx deployments, Cartoview will be able to detect new apps and get the upd
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Installation - ubuntu
+                Installation | Ubuntu
               </span>
             </div>
           </a>
@@ -664,7 +1224,7 @@ For nginx deployments, Cartoview will be able to detect new apps and get the upd
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Installation - docker
+                Installation | Docker
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
