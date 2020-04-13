@@ -250,7 +250,7 @@
 
 
   <li class="md-nav__item">
-    <a href="./" title="Installation" class="md-nav__link">
+    <a href="../installation_ubuntu/" title="Installation" class="md-nav__link">
       Installation
     </a>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -261,7 +261,7 @@
       </li>
 
       <li class="md-nav__item">
-        <a href="../installation_ubuntu/" title="Installation | Windows" class="md-nav__link">
+        <a href="../installation_windows/" title="Installation | Windows" class="md-nav__link">
           Windows
         </a>
       </li>
@@ -279,8 +279,8 @@
           <label class="md-nav__title" for="toc">Table of contents</label>
           <ul class="md-nav__list" data-md-scrollfix>
             <li class="md-nav__item">
-              <a href="#docker" title="Docker" class="md-nav__link">
-                Docker
+              <a href="#introduction" title="Introduction" class="md-nav__link">
+                Introduction
               </a>
             </li>
             <li class="md-nav__item">
@@ -289,18 +289,13 @@
               </a>
             </li>
             <li class="md-nav__item">
+              <a href="#cartoview-libraries-installation" title="Cartoview Libraries Installation" class="md-nav__link">
+                Cartoview Libraries Installation
+              </a>
+            </li>
+            <li class="md-nav__item">
               <a href="#deployment-notes" title="Deployment notes" class="md-nav__link">
                 Deployment notes
-              </a>
-            </li>
-            <li class="md-nav__item">
-              <a href="#windows-issues" title="Windows Issues" class="md-nav__link">
-                Windows Issues
-              </a>
-            </li>
-            <li class="md-nav__item">
-              <a href="#docker-on-linux" title="Docker on Linux" class="md-nav__link">
-                Docker on Linux
               </a>
             </li>
           </ul>
@@ -413,12 +408,11 @@
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#docker" title="Docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
+      <li class="md-nav__item">
+        <a href="#introduction" title="Introduction" class="md-nav__link">
+          Introduction
+        </a>
+      </li>
       
         <li class="md-nav__item">
   <a href="#installation-requirements" title="Installation Requirements" class="md-nav__link">
@@ -426,24 +420,15 @@
   </a>
   
 </li>
+      <li class="md-nav__item">
+        <a href="#cartoview-libraries-installation" title="Cartoview Libraries Installation" class="md-nav__link">
+          Cartoview Libraries Installation
+        </a>
+      </li>
       
         <li class="md-nav__item">
   <a href="#deployment-notes" title="Deployment notes" class="md-nav__link">
     Deployment notes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows-issues" title="Windows Issues" class="md-nav__link">
-    Windows Issues
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-on-linux" title="Docker on Linux" class="md-nav__link">
-    Docker on Linux
   </a>
   
 </li>
@@ -460,139 +445,489 @@
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
+              <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation_docker.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+              <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
               
-                
-                  <a href="https://github.com/cartologic/cartoview/edit/master/docs/installation_docker.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
-                
-                
-                <h1 id="cartoview">Cartoview<a class="headerlink" href="#cartoview" title="Permanent link">&para;</a></h1>
-<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
-<h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Install <a href="https://www.python.org/download/releases/2.7/">Python2.7</a></p>
-<ul>
-<li>
-<p>Make Sure to add Python to the Path, as this is not done by default </p>
-</li>
-<li>
-<p>Add python.exe to the PATH
-<br/> <br/>
-    <img alt="python setup" src="../img/python.png" />
-    <img alt="python setup" src="../img/python2.png" /></p>
-<p><br/></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Install Django 1.8.7 
-     , Open Command Prompt then type:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install <span class="nv">django</span><span class="o">==</span><span class="m">1</span>.8.7
-</pre></div>
-</td></tr></table>
+              <h2 id="introduction">
+                Introduction
+                <a class="headerlink" href="#introduction" title="Permanent link">&para;</a>
+              </h2>
+              <p>This document describes the installation of Cartoview using Docker on either <a href="#for-ubuntu">Ubuntu 18.04</a> or <a href="#for-windows">Windows 10</a>.</p>
+              
+              <h2 id="installation-requirements">Installation Requirements<a class="headerlink" href="#installation-requirements" title="Permanent link">&para;</a></h2>
+              <ul>
+                <li>
+                  <h4 id="for-ubuntu">For Ubuntu 18.04:</h4>
+                  <ul>
+                    <li>
+                      <h4>Install Docker</h4>
+                      <p>In order to be able to run Cartoview with docker engine, Docker Compose should be installed, but because it relies on Docker Engine, we will install <code>docker</code> first from Docker official website.</p>
+                      <p>1. Install <strong>Docker Engine</strong>, navigate to <a href="https://docs.docker.com/engine/install/ubuntu/">this guide</a>. We recommend to install it using <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">docker repository</a>.</p>
+                      <p>2. Install <strong>Docker Compose</strong>, navigate to <a href="https://docs.docker.com/compose/install/">this guide</a>.</p>
+                      <div class="admonition note">
+                        <p class="admonition-title">Note</p>
+                        <h4>Run Docker commands without <code>sudo</code></h4>
+                        <p>The Docker daemon needs to use <code>root</code> privileges, so we always prefix each docker command with <code>sudo</code>, but if you want to run them without <code>sudo</code>, check <a href="https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user">How to manage Docker as a non-root user</a>.</p>
+                      </div>
 
-</li>
-</ul>
-<div class="admonition attention">
-<p class="admonition-title">Docker Users</p>
-<ul>
-<li>You need to install <a href="https://docs.docker.com/compose/install/">docker-compose</a></li>
-</ul>
-</div>
-<ul>
-<li>For Windows Users install <code>make</code> by<ul>
-<li>Installing <a href="http://www.msys2.org/">MSYS2</a></li>
-<li>Open MSYS2 shell and Install <code>make</code> using this command <code>pacman -S make</code></li>
-<li>Add <code>&lt;msys_path&gt;\usr\bin</code> to <code>PATH</code> envirnment variable</li>
-</ul>
-</li>
-<li>
-<p>Use <code>Docker Quickstart Terminal</code> to execute the following commands</p>
-<ul>
-<li>
-<p>Create Cartoview Project which contains required files to run and configure Docker using this command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">django</span><span class="o">-</span><span class="n">admin</span><span class="o">.</span><span class="n">py</span> <span class="n">startproject</span> <span class="o">--</span><span class="n">template</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">cartologic</span><span class="o">/</span><span class="n">Cartoview</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span> <span class="o">--</span><span class="n">name</span> <span class="n">django</span><span class="o">.</span><span class="n">env</span><span class="p">,</span><span class="n">uwsgi</span><span class="o">.</span><span class="n">ini</span><span class="p">,</span><span class="o">.</span><span class="n">bowerrc</span><span class="p">,</span><span class="n">server</span><span class="o">.</span><span class="n">py</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
-</pre></div>
-</td></tr></table>
+                      <h4>Validate Docker Installation</h4>
+                      <p>To make sure Docker is installed successfully, run the following command.</p>
+                      <table class="codehilitetable">
+                        <tr>
+                          <td class="linenos">
+                            <div class="linenodiv">
+                              <pre>1</pre>
+                            </div>
+                          </td>
+                          <td class="code">
+                            <div class="codehilite">
+                              <pre><span></span>docker --version</pre>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <p>It should print something like, <code>Docker version 19.03.8, build afacb8b</code>.</p>
+                    </li>
 
-</li>
-<li>
-<p>Replace <code>&lt;your_project_name&gt;</code> with the desired name</p>
-</li>
-<li>
-<p>Go to your project Folder</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cd</span> <span class="o">&lt;</span><span class="n">your_project_name</span><span class="o">&gt;</span>
-</pre></div>
-</td></tr></table>
+                    <li>
+                      <h4>Install Python2.7 and Django</h4>
+                      <p>In order to run Cartoview Project Template, we need to install python and django.</p>
+                      <table class="codehilitetable">
+                        <tr>
+                          <td class="linenos">
+                            <div class="linenodiv">
+                              <pre>1
+2</pre>
+                            </div>
+                          </td>
+                          <td class="code">
+                            <div class="codehilite">
+                              <pre><span></span>sudo apt-get update
+sudo apt-get install python-pip python-django</pre>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li>
+                  <h4 id="for-windows">For Windows 10:</h4>
+                  <p>Docker has two applications:</p>
+                  <p>1. <strong>Docker Desktop</strong> but it has <a href="https://docs.docker.com/docker-for-windows/install/#system-requirements">specific system requirements</a> that must be met.</p>
+                  <p>2. <strong>Docker Toolbox</strong> which is used for systems that do not meet the requirements of Docker Desktop.</p>
 
-</li>
-<li>
-<p>Open <code>docker-compose.yml</code> and Look at port numbers for GeoServer and PostGIS and change the number before the <code>:</code> this will be the port on your machine</p>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tips<ul>
-<li>Any file with <code>.env</code> EXTENSION is a file that contains Environment Variables passed to specific container for example <code>django.env</code> file contains Environment Variables passed to Cartoview container so Django can read these variables and use them</li>
-<li>Default database username: <code>cartologic</code> and password: <code>root</code></li>
-<li>Default database username is in <code>postgis.env</code> file in your project if you want to change it.</li>
-<li>If you want to run this project with a domain :<ul>
-<li>From<code>django.env</code>(this is a file that contain common django setting variables) file in your Project Folder:
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+                  <h4>For Windows Docker Desktop:</h4>
+                  <ul>
+                    <li>
+                      <h4>Download and Install Docker</h4>
+                      <p>Walk through this guide to download and install <a href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop</a>.</p>
+                      <div class="admonition warning">
+                        <p class="admonition-title">Important</p>
+                        <p>Before installing Docker Desktop, please read carefully the <a href="https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install">What to know before you install</a> section.</p>
+                      </div>
+                      <div class="admonition note">
+                        <p class="admonition-title">Note</p>
+                        <p>While installing, make sure you leave everything as default.</p>
+                      </div>
+                      <p>After installing docker desktop, we need to start it. In the search-bar, search for <strong>Docker</strong>, and select <strong>Docker Desktop</strong> in the search results.</p>
+                      <p>When the whale icon in the taskbar stays steady, <strong>Docker Desktop</strong> is up-and-running, and is accessible from any terminal window.</p>
+                      <div class="admonition note">
+                        <p class="admonition-title">Note</p>
+                        <p>If you right-click on the whale icon, you can check multiple features like docker version, docker hub, dashboard, etc.</p>
+                        <img alt="docker windows" src="../img/docker_windows2.png" >
+                      </div>
+                      <p><strong>Docker Dashboard</strong> provides a useful interface to handle and control all the available containers easily. Please visit <a href="https://docs.docker.com/docker-for-windows/dashboard/">Docker Desktop Dashboard</a> for more details.</p>
+                      <p>Now, if we need to execute any incoming commands, we can execute them in the <code>Command Prompt</code> or <code>Windows PowerShell</code>.</p>
+                    </li>
+
+                    <li>
+                      <h4>Optional | Configure Docker Resources</h4>
+                      <p>You may want to change the default resources given to Docker to speed up operations that will be done on the containers.</p>
+                      <p>Right-click on the whale icon, select <strong>Settings</strong>, navigate to <strong>Resources</strong> tab.</p>
+                      <img alt="docker windows settings" src="../img/docker_windows3.png" >
+                    </li>
+                  </ul>
+
+                  <h4>For Docker Toolbox:</h4>
+                  <ul>
+                    <li>
+                      <h4>Download and Install Docker</h4>
+                      <p>Walk through this guide to download and install <a href=" https://docs.docker.com/toolbox/toolbox_install_windows/">Docker Toolbox</a> untill you got the terminal in which we will execute the following commands.</p>
+                      <div class="admonition note">
+                        <p class="admonition-title">Note</p>
+                        <p><strong>Docker Toolbox</strong> by default, is configured to use IP address <code>192.168.99.100</code> so instead of using <code>localhost</code> we will use this IP address.</p>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <h4>Validate Docker Installation</h4>
+                  <p>To make sure Docker is installed successfully, run the following command.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>docker --version</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>It should print something like, <code>Docker version 19.03.8, build afacb8b</code>.</p>
+                </li>
+
+              <li>
+                <h4>Install Python2.7 and Django</h4>
+                      <p>As explained in <a href="../installation_windows/#installation-requirements">Cartoview Installation | Windows</a> section, download and install <a href="https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi">Python2.7</a>.</p>
+                      <p>Open <code>Windows PowerShell</code> and install django.</p>
+                      <table class="codehilitetable">
+                        <tr>
+                          <td class="linenos">
+                            <div class="linenodiv">
+                              <pre>1</pre>
+                            </div>
+                          </td>
+                          <td class="code">
+                            <div class="codehilite">
+                              <pre><span></span>pip install django==1.11.11</pre>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+              </li>
+              </ul>
+
+              <h2 id="cartoview-libraries-installation">
+                Cartoview Libraries Installation
+                <a class="headerlink" href="#cartoview-libraries-installation" title="Permanent link">&para;</a>
+              </h2>
+              <ul>
+                <li>
+                  <h4>Download and Install Cartoview Project Template</h4>
+                  <p>In order to setup the project template, we need to make a django project based on Cartoview.</p>
+                  <p>We will call it <code>cartoview_project</code> but you can name it whatever you want.</p>
+                  <div class="admonition warning">
+                    <p class="admonition-title">Warning</p>
+                    <p>Before executing the command below, make sure that port 80 is not used by any process as Cartoview project will be running on it.</p>
+                  </div>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py cartoview_project</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Notes</p>
+                    <p>For the above command, if you want to change the name of the project any name other than <code>cartoview_project</code>, you can just substitute<code>cartoview_project</code> with the name you have chosen.</p>
+                    <p>If <code>django-admin.py</code> is not working, try <code>django-admin</code>.</p>
+                  </div>
+                  <p>This will generate a folder called <code>cartoview_project</code> (or the name you have specified).</p>
+                  <p>Cartoview project template will take care of the initial setup of your project. It will generate all the code that is needed to establish a Django project that is based on Cartoview and GeoNode frameworks.</p>
+                  <p>Navigate inside <code>cartoview_project</code></p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>cd cartoview_project
+docker-compose up -d</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition warning">
+                    <p class="admonition-title">For UBUNTU</p>
+                    <p>If you didn't configure docker to run without <code>sudo</code>, make sure to prefix each docker command with it.</p>
+                  </div>
+                  <p>Get a cup of coffee and wait untill all the images are downloaded and installed successfully.</p>
+                  <div class="admonition warning">
+                    <p class="admonition-title">For DOCKER DESKTOP</p>
+                    <p>While installation, you may be prompted to accept whether to give permission for Docker to mount its containers on one of your hard-drives or to not. Accept this so that the containers may run probably.</p>
+                    <p>If you didn't accept, you will get errors. Execute <code>docker-compose up -d</code> again and accept.</p>
+                  </div>
+                  <p>After all images are downloaded, you can monitor the logs of initiating <code>Cartoview Project Template</code> with this command.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>docker-compose logs -f --tail=100</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <h4>For Windows DOCKER DESKTOP</h4>
+                  <p>If you open <strong>Docker Dashboard</strong>, you should find the installed containers up and running.</p>
+                  <img alt="running containers" src="../img/containers.png" >
+                  <p>Also, you can see the logs by just double-click on <code>cartoview</code>.</p>
+                  <img alt="cartoview logs" src="../img/cartoview_logs.png" >
+                </li>
+
+                <li>
+                  <h4>Migrate & Load default data</h4>
+                  <p>We need to execute some commands to the service after it's up and running. So we will open the terminal inside <code>Cartoview Project Template</code> container.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>docker exec -it cartoview_container /bin/bash</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>This will open a shell in which we will execute the below commands.</p>
+                  
+                  <div class="admonition note">
+                    <p class="admonition-title">For Windows DOCKER DESKTOP</p>
+                    <p>Open <strong>Docker Dashboard</strong> and for <code>cartoview_cartoview_1</code> container, click on the <code>Cli</code> button to open the terminal in which we will execute the below commands.</p>
+                    <img alt="cartoview logs" src="../img/cartoview_cli.PNG" >
+                  </div>
+
+                  <p>Detect changes in the <code>app_manager</code></p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py makemigrations app_manager</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Create account Table:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py migrate account</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Create the rest of the tables:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py migrate</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Load default User:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata sample_admin.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Load default oauth apps so that you will be able to authenticate with defined external server:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata default_oauth_apps.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <p>Load default Initial Data for Cartoivew:</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>python manage.py loaddata initial_data.json</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>After executing the above commands, you can exit the container terminal by just typing <code>exit</code> then hit the <code>Enter</code> button.</p>
+                  </div>
+                </li>
+                
+                <li>
+                  <h4>Test the development server</h4>
+                  <p>To see the effect of changes, all we have to do is just restarting the service.</p>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>docker-compose restart</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <div class="admonition note">
+                    <p class="admonition-title">For Windows DOCKER DESKTOP</p>
+                    <p>Open <strong>Docker Dashboard</strong> and for <code>cartoview_nginx_1</code> container, click on <code>Open in browser</code> button to open Cartoview project instance in the browser.</p>
+                    <img alt="cartoview browser" src="../img/cartoview_browser.PNG">
+                  </div>
+
+                  <p>In the browser navigate to <code>localhost:80</code>. You should get:</p>
+                  <img alt="cartoview browser" src="../img/cartoview.png">
+                  <h4>Sign-in with:</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>user: admin
+password: admin</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>For GeoServer: <code>localhost:80/geoserver</code></p>
+                  <img alt="cartoview browser" src="../img/geoserver.png">
+                  <p>To sign-in, make sure you're signed in Cartoview and click on GeoNode icon beside the <code>Login</code> button.</p>
+                </li>
+              </ul>
+              
+              <ul>
+                <div class="admonition tip">
+                  <p class="admonition-title">Tips<ul>
+                    <li>
+                      Any file with <code>.env</code> EXTENSION is a file that contains Environment Variables passed to specific container for example <code>django.env</code> file contains Environment Variables passed to Cartoview container so Django can read these variables and use them
+                    </li>
+                    <li>
+                      If you want to run this project with a domain :
+                      <ul>
+                        <li>From<code>django.env</code>(this is a file that contain common django setting variables) file in your Project Folder:
+                          <table class="codehilitetable">
+                            <tr>
+                              <td class="linenos">
+                                <div class="linenodiv">
+                                  <pre>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">Cartoview</span>
+5</pre>
+                                </div>
+                              </td>
+                              <td class="code">
+                                <div class="codehilite">
+                                  <pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">Cartoview</span>
 <span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;/</span><span class="n">geoserver</span><span class="o">/</span>
 <span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
 <span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">your_domain_or_ip</span><span class="o">&gt;</span>
 <span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
-</pre></div>
-</td></tr></table></li>
-</ul>
-</li>
-<li>For windows users the default IP aasigned to Docker is : <code>192.168.99.100</code> so the default django.env file must be something like this:
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+</pre>
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <Strong>For windows Toolbox</Strong>, the default IP aasigned to Docker is : <code>192.168.99.100</code> so the default django.env file must be something like this:
+                      <table class="codehilitetable">
+                        <tr>
+                          <td class="linenos">
+                            <div class="linenodiv">
+                              <pre>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">Cartoview</span>
+5</pre>
+                            </div>
+                          </td>
+                          
+                          <td class="code">
+                            <div class="codehilite">
+                              <pre><span></span><span class="n">DATABASE_URL</span><span class="o">=</span><span class="n">postgres</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">database_user_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">database_password</span><span class="o">&gt;</span><span class="nd">@postgis</span><span class="p">:</span><span class="mi">5432</span><span class="o">/</span><span class="n">Cartoview</span>
 <span class="n">GEOSERVER_PUBLIC_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">99.100</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
 <span class="n">GEOSERVER_LOCATION</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">geoserver</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">geoserver</span><span class="o">/</span>
 <span class="n">SITEURL</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">99.100</span>
 <span class="n">ALLOWED_HOSTS</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
-</pre></div>
-</td></tr></table></li>
-</ul>
-</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<ul>
-<li>For windows Users Please Comment volumes lines of postgis Container only in <code>docker-compose.yml</code> by preceding the line with <code>#</code> something like this:
-    <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="c1">#   volumes:</span>
-    <span class="c1">#    - pgdata:/var/lib/postgresql</span>
-</pre></div>
-</td></tr></table></li>
-<li>if <code>django-admin.py</code> not working try <code>django-admin</code></li>
-</ul>
-</div>
-</li>
-<li>
-<p>Start Docker Images(Cartoview,GeoServer,Postgres) type :</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>make run
-</pre></div>
-</td></tr></table>
+</pre>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </li>
+                  </ul>
+                </p>
+              </div>
 
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>Now you can Access Cartoview on <code>http://localhost</code> or <code>http://&lt;your_domain_or_ip&gt;</code></p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p>Final step Configure GeoServer before uploading layers from <a href="http://docs.geonode.org/en/master/tutorials/admin/geoserver_geonode_security/#geoserver-security-backend">Here</a></p>
-</div>
-</li>
 </ul>
 <h2 id="deployment-notes">Deployment notes<a class="headerlink" href="#deployment-notes" title="Permanent link">&para;</a></h2>
 <ul>
@@ -616,14 +951,6 @@ After you install any new app or any app update you will need to restart docker 
 </ul>
 </div>
 </li>
-</ul>
-<h2 id="windows-issues">Windows Issues<a class="headerlink" href="#windows-issues" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Docker volumes have some issues with windows so you have to backup your postgres database.</li>
-</ul>
-<h2 id="docker-on-linux">Docker on Linux<a class="headerlink" href="#docker-on-linux" title="Permanent link">&para;</a></h2>
-<ul>
-<li>You will Find all postgres data in pgdata folder.</li>
 </ul>
                 
                   

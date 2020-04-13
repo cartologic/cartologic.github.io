@@ -252,7 +252,7 @@
     Edit HERE
   -->
   <li class="md-nav__item">
-    <a href="./" title="Installation" class="md-nav__link">
+    <a href="../installation_ubuntu/" title="Installation" class="md-nav__link">
       Installation
     </a>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -511,7 +511,8 @@
               
               <ul>
                 <li>
-                  <h4>Install <a href="https://www.python.org/downloads/release/python-2717/">Python2.7</a></h4>
+                  <h4>Install Python2.7</h4>
+                  <p>Download <a href="https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi">Python Windows installer</a> and proceed with installation.</p>
                   <p>While installing python, we need to add it to the path so that we can use it inside the command prompt.</p>
                   <h5>Instead of this:</h5>
                   <img alt="python setup" src="../img/python.png" />
@@ -935,7 +936,7 @@ os.environ['GDAL_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\L
 
                 <li>
                   <h4>Migrate & Load default data</h4>
-                  <p>Navigate to <code>cartoview_project</code></p>
+                  <p>Navigate to <code>cartoview_project</code> and inside it, run the below commands.</p>
                   <p>Detect changes in <code>app_manager</code> App</p>
                   <table class="codehilitetable">
                     <tr>
@@ -1049,6 +1050,26 @@ os.environ['GDAL_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\L
                       </td>
                     </tr>
                   </table>
+                  
+                  <p>At <code>localhost:8000</code>, you should get:</p>
+                  <img alt="cartoview browser" src="../img/cartoview.png">
+                  <h4>Sign-in with:</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>user: admin
+password: admin</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
                 </li>
 
                 <li>
@@ -1126,9 +1147,9 @@ os.environ['GDAL_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\L
                   <h4>Install Apache Tomcat 9</h4>
                   <p>Download the windows installer from <a href="https://downloads.apache.org/tomcat/tomcat-9/v9.0.33/bin/apache-tomcat-9.0.33.exe">here</a>.</p>
                   <p>While proceeding with the installer, make sure to check install <code>Host Manager</code>.</p>
-                  <img alt="postgresql setup" src="../img/tomcat1.png"/>
+                  <img alt="tomcat setup" src="../img/tomcat1.png"/>
                   <p>Configure Tomcat Web Management Interface by setting the admin credentials. We will set username to be <code>admin</code> and password to be <code>cartoview</code>.</p>
-                  <img alt="postgresql setup" src="../img/tomcat2.png"/>
+                  <img alt="tomcat setup" src="../img/tomcat2.png"/>
                   <div class="admonition note">
                     <p class="admonition-title">Note</p>
                     <p>Make sure the <code>Roles</code> field contains <code>admin-gui,manager-gui</code>.</p>
@@ -1147,7 +1168,7 @@ os.environ['GDAL_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\L
                   </div>
                   <p>In the search bar (beside windows icon), search for <code>Services</code> and run it. It should open to you all the running services on your windows machine.</p>
                   <p>Navigate to a service called <code>Apache Tomcat 9.0 Tomcat9</code> and restart it.</p>
-                  <img alt="postgresql setup" src="../img/restart_tomcat.png"/>
+                  <img alt="tomcat setup" src="../img/restart_tomcat.png"/>
                   <p>This will cause Tomcat to serve GeoServer from the war file which we have put inside <code>Tomcat 9.0/webapps</code>.</p>
                   <div class="admonition info">
                     <p class="admonition-title">Info</p>
@@ -1159,7 +1180,8 @@ os.environ['GDAL_LIBRARY_PATH'] = r'your_path\cartoview_service\cartoview_venv\L
                     </ul>
                   </div>
                   <h4>Now GeoServer is up and running at <code>localhost:8080/geoserver</code>.</h4>
-                  <img alt="postgresql setup" src="../img/geoserver.png"/>
+                  <img alt="Geoserver" src="../img/geoserver.png"/>
+                  <p>To sign-in, make sure you're signed in Cartoview and click on GeoNode icon beside the <code>Login</code> button.</p>
                 </li>
               </ul>
 

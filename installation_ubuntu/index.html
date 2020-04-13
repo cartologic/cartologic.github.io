@@ -359,7 +359,7 @@
               
               <ul>
                 <li>
-                  <h4>Install <a href="https://www.python.org/download/releases/2.7/">Python2.7</a> and Django.</h4>
+                  <h4>Install Python2.7 and Django.</h4>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -881,7 +881,7 @@ pip install -e .</pre>
                 
                 <li>
                   <h4>Migrate & Load default data</h4>
-                  <p>Navigate to <code>cartoview_project</code></p>
+                  <p>Navigate to <code>cartoview_project</code> and inside it, run the below commands.</p>
                   <p>Detect changes in the <code>app_manager</code></p>
                   <table class="codehilitetable">
                     <tr>
@@ -991,6 +991,26 @@ pip install -e .</pre>
                       <td class="code">
                         <div class="codehilite">
                           <pre><span></span>python manage.py runserver 0.0.0.0:8000</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  
+                  <p>At <code>localhost:8000</code>, you should get:</p>
+                  <img alt="cartoview browser" src="../img/cartoview.png">
+                  <h4>Sign-in with:</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>user: admin
+password: admin</pre>
                         </div>
                       </td>
                     </tr>
@@ -1429,7 +1449,8 @@ wget --no-check-certificate https://build.geo-solutions.it/geonode/geoserver/lat
                     </ul>
                   </div>
                   <h4>Now GeoServer is up and running at <code>localhost:8080/geoserver</code>.</h4>
-                  <img alt="postgresql setup" src="../img/geoserver.png"/>
+                  <img alt="geoserver" src="../img/geoserver.png"/>
+                  <p>To sign-in, make sure you're signed in Cartoview and click on GeoNode icon beside the <code>Login</code> button.</p>
                 </li>
               </ul>
               
