@@ -881,24 +881,33 @@ password: geoserver</pre>
                 <li>
                   <h4>Configure GeoServer with Cartoview</h4>
                   <p>In order to be able to use the full service of <code>Cartoview</code>, we need to authenticate GeoServer with it.</p>
-                  <p>1. At the left-side menu, navigate to <strong>Security</strong> section and click on <strong>Authentication</strong>.</p>
+                  <p>1. Inside <code>cartoview</code> directory, navigate to <code>env</code> folder and open the file called <strong>celery.env</strong>.</p>
+                  <p>Edit the contents of the file as below:</p>
+                  <p>
+                    <code>GEOSERVER_PUBLIC_LOCATION=http://localhost/geoserver/</code> instead of <code>http://10.5.0.4/geoserver/</code>.
+                  </p>
+                  <p>
+                    <code>SITEURL=http://localhost/</code> instead of <code>http://10.5.0.4/</code>.
+                  </p>
+                  <p>2. The same as step 1, but for another file called <strong>django.env</strong></p>
+                  <p>3. At the left-side menu, navigate to <strong>Security</strong> section and click on <strong>Authentication</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf4.png">
-                  <p>2. At the <strong>Authentication Filters</strong>, select <strong>geonode-oauth2</strong>.</p>
+                  <p> At the <strong>Authentication Filters</strong>, select <strong>geonode-oauth2</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf5.png">
-                  <p>3. Change the URLs inside the red square to the values in the image then click <strong>Save</strong>.</p>
+                  <p> Change the URLs inside the red square to the values in the image then click <strong>Save</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf6.png">
                   <p>4. At the left-side menu, navigate to <strong>Security</strong> section and click on <strong>Users, Groups, Rules</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf1.png">
-                  <p>5. Click on <strong>geonode REST role service</strong>.</p>
+                  <p> Click on <strong>geonode REST role service</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf7.png">
-                  <p>8. Select <strong>ROLE_ADMIN</strong> for <code>Administrator role</code> and <code>Group administrator role</code>.</p>
-                  <p>9. Change the <strong>Base Server URL</strong> and click <strong>Save</strong>.</p>
+                  <p> Select <strong>ROLE_ADMIN</strong> for <code>Administrator role</code> and <code>Group administrator role</code>.</p>
+                  <p> Change the <strong>Base Server URL</strong> and click <strong>Save</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf8.png">
-                  <p>10. At the left-side menu, navigate to <strong>Settings</strong> section and click on <strong>Global</strong>.</p>
+                  <p>5. At the left-side menu, navigate to <strong>Settings</strong> section and click on <strong>Global</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf9.png">
-                  <p>11. Edit the <strong>Proxy Base URL</strong>.</p>
+                  <p> Edit the <strong>Proxy Base URL</strong>.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf10.png">
-                  <p>12. Sign out from GeoServer and go to Cartoview at <code>localhost</code>. Login in Cartoview then open GeoServer from the <strong>admin dropdown</strong>, you should be logged in GeoServer successfully.</p>
+                  <p>6. Sign out from GeoServer and go to Cartoview at <code>localhost</code>. Login in Cartoview then open GeoServer from the <strong>admin dropdown</strong>, you should be logged in GeoServer successfully.</p>
                   <img alt="geoserver configuration" src="../img/geoserver_conf11.png">
                 </li>
               </ul>
