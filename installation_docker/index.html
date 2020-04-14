@@ -608,13 +608,8 @@ sudo apt-get install python-pip python-django</pre>
               </h2>
               <ul>
                 <li>
-                  <h4>Download and Install Cartoview Project Template</h4>
-                  <p>In order to setup the project template, we need to make a django project based on Cartoview.</p>
-                  <p>We will call it <code>cartoview_project</code> but you can name it whatever you want.</p>
-                  <div class="admonition warning">
-                    <p class="admonition-title">Warning</p>
-                    <p>Before executing the command below, make sure that port 80 is not used by any process as Cartoview project will be running on it.</p>
-                  </div>
+                  <h4>Download and Install Cartoview</h4>
+                  <p>Download the latest version of cartoview by cloning the repository.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -624,19 +619,17 @@ sudo apt-get install python-pip python-django</pre>
                       </td>
                       <td class="code">
                         <div class="codehilite">
-                          <pre><span></span>django-admin.py startproject --template=https://github.com/cartologic/Cartoview-project-template/archive/master.zip --name django.env,uwsgi.ini,.bowerrc,server.py cartoview_project</pre>
+                          <pre><span></span>git clone https://github.com/cartologic/cartoview.git</pre>
                         </div>
                       </td>
                     </tr>
                   </table>
-                  <div class="admonition note">
-                    <p class="admonition-title">Notes</p>
-                    <p>For the above command, if you want to change the name of the project any name other than <code>cartoview_project</code>, you can just substitute<code>cartoview_project</code> with the name you have chosen.</p>
-                    <p>If <code>django-admin.py</code> is not working, try <code>django-admin</code>.</p>
+                  <p>This will create a directory called <code>cartoview</code>.</p>
+                  <p>Navigate inside it to install Cartoview using docker.</p>
+                  <div class="admonition warning">
+                    <p class="admonition-title">Warning</p>
+                    <p>Before executing the command below, make sure that port 80 is not used by any process as Cartoview will be running on it.</p>
                   </div>
-                  <p>This will generate a folder called <code>cartoview_project</code> (or the name you have specified).</p>
-                  <p>Cartoview project template will take care of the initial setup of your project. It will generate all the code that is needed to establish a Django project that is based on Cartoview and GeoNode frameworks.</p>
-                  <p>Navigate inside <code>cartoview_project</code></p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -663,7 +656,7 @@ docker-compose up -d</pre>
                     <p>While installation, you may be prompted to accept whether to give permission for Docker to mount its containers on one of your hard-drives or to not. Accept this so that the containers may run probably.</p>
                     <p>If you didn't accept, you will get errors. Execute <code>docker-compose up -d</code> again and accept.</p>
                   </div>
-                  <p>After all images are downloaded, you can monitor the logs of initiating <code>Cartoview Project Template</code> with this command.</p>
+                  <p>After all images are downloaded, you can monitor the logs of initiating <code>Cartoview</code> with this command.</p>
                   <table class="codehilitetable">
                     <tr>
                       <td class="linenos">
@@ -856,10 +849,61 @@ password: admin</pre>
                   </table>
                   <p>For GeoServer: <code>localhost:80/geoserver</code></p>
                   <img alt="cartoview browser" src="../img/geoserver.png">
-                  <p>To sign-in, make sure you're signed in Cartoview and click on GeoNode icon beside the <code>Login</code> button.</p>
+                  <h4>Sign-in with:</h4>
+                  <table class="codehilitetable">
+                    <tr>
+                      <td class="linenos">
+                        <div class="linenodiv">
+                          <pre>1
+2</pre>
+                        </div>
+                      </td>
+                      <td class="code">
+                        <div class="codehilite">
+                          <pre><span></span>user: admin
+password: geoserver</pre>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <h4>Optional | Change default GeoServer admin Password</h4>
+                  <p>1. Login with GeoServer credentials that were mentioned above.</p>
+                  <p>2. At the left-side menu, navigate to <strong>Security</strong> section and click on <strong>Users, Groups, Rules</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf1.png">
+                  <p>3. Click on <strong>Users/Groups</strong> then select <strong>admin</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf2.png">
+                  <p>4. Set the password you wish then scroll to the end of the page and click <strong>Save</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf3.png">
+                  <p>Now, you can logout and login again with the new password you have just entered.</p>
+                </li>
+                
+                <li>
+                  <h4>Configure GeoServer with Cartoview</h4>
+                  <p>In order to be able to use the full service of <code>Cartoview</code>, we need to authenticate GeoServer with it.</p>
+                  <p>1. At the left-side menu, navigate to <strong>Security</strong> section and click on <strong>Authentication</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf4.png">
+                  <p>2. At the <strong>Authentication Filters</strong>, select <strong>geonode-oauth2</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf5.png">
+                  <p>3. Change the URLs inside the red square to the values in the image then click <strong>Save</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf6.png">
+                  <p>4. At the left-side menu, navigate to <strong>Security</strong> section and click on <strong>Users, Groups, Rules</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf1.png">
+                  <p>5. Click on <strong>geonode REST role service</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf7.png">
+                  <p>8. Select <strong>ROLE_ADMIN</strong> for <code>Administrator role</code> and <code>Group administrator role</code>.</p>
+                  <p>9. Change the <strong>Base Server URL</strong> and click <strong>Save</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf8.png">
+                  <p>10. At the left-side menu, navigate to <strong>Settings</strong> section and click on <strong>Global</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf9.png">
+                  <p>11. Edit the <strong>Proxy Base URL</strong>.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf10.png">
+                  <p>12. Sign out from GeoServer and go to Cartoview at <code>localhost</code>. Login in Cartoview then open GeoServer from the <strong>admin dropdown</strong>, you should be logged in GeoServer successfully.</p>
+                  <img alt="geoserver configuration" src="../img/geoserver_conf11.png">
                 </li>
               </ul>
               
+              <h1>OLD VERSION</h1>
               <ul>
                 <div class="admonition tip">
                   <p class="admonition-title">Tips<ul>
