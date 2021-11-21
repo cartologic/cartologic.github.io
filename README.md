@@ -8,29 +8,29 @@ To run and edit this documentation locally, please follow the upcoming steps.
 
 - Create [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html).
 
-```shell
-virutalenv -p python3 docs_venv
-# Activate the virutal env
-## Linux
-source docs_venv/bin/activate
-## Windows
-.\docs_venv\Scripts\activate.bat
-```
+    ```shell
+    virutalenv -p python3 docs_venv
+    # Activate the virutal env
+    ## Linux
+    source docs_venv/bin/activate
+    ## Windows
+    .\docs_venv\Scripts\activate.bat
+    ```
 
 - Install [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/#installation) using pip.
 
-```shell
-pip install mkdocs-material
-```
+    ```shell
+    pip install mkdocs-material
+    ```
 
 - Run the documentation.
 
-```shell
-# Run on localhost:8000
-mkdocs serve
-# Run on different port (e.g. 7070)
-mkdocs serve -a localhost:7070
-```
+    ```shell
+    # Run on localhost:8000
+    mkdocs serve
+    # Run on different port (e.g. 7070)
+    mkdocs serve -a localhost:7070
+    ```
 
 - Each time you edit inside **docs** folder, the hard-reload will update accordingly.
 
@@ -45,3 +45,5 @@ mkdocs build
 This will generate a folder called **site** that can be hosted on any web server.
 
 Each time there's a pushed new commit, a new **site** is automatically built and deployed to [GitHub pages](https://pages.github.com/) (e.g. [cartologic.github.io](https://cartologic.github.io/)) using GitHub actions workflow (e.g. `.github/workflows/MkDocs-CI.yml`) to automate the build and deployment of the documentation.
+
+This will generate the **site** contents in a branch called [gh-pages](https://github.com/cartologic/cartologic.github.io/tree/gh-pages) from which [cartologic.github.io](https://cartologic.github.io/) will be served.
